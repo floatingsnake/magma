@@ -109,4 +109,7 @@ class ImagePrefix(nn.Module):
         if self.use_layernorm:
             logits = self.ln(logits)
 
+        if logits.ndim == 2:
+            logits = logits.unsqueeze(1)
+
         return logits
