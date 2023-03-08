@@ -106,7 +106,8 @@ class Magma(nn.Module):
             for param in self.image_prefix.enc.parameters():
                 param.requires_grad = False
 
-        self.lm.to(self.device)
+        # added for CPU tests. No longer needed and leads to OOM on GPUs.
+        #self.lm.to(self.device)
 
     def add_adapters(
         self,
