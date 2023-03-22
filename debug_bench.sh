@@ -23,5 +23,5 @@ export OMP_NUM_THREADS=1
 export WORLD_SIZE=$(($NNODE*6))
 jsrun -n 4 -a 6 -c 6 -g 6 \
 python -u benchmark.py --deepspeed \
-  --config /ccs/home/lfsm/code/magma/configs/benchmark_n4.yml
+  --config /ccs/home/lfsm/code/magma/configs/benchmark_mbs4.yml
 

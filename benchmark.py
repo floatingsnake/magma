@@ -45,6 +45,7 @@ def world_info_from_env():
         if v in os.environ:
             world_size = int(os.environ[v])
             break
+    return local_rank, global_rank, world_size
 
 if __name__ == "__main__":
     
@@ -104,7 +105,6 @@ if __name__ == "__main__":
         model=model,
         optimizer=opt,
         model_parameters=trainable_parameters,
-        collate_fn=partial(collate_fn, seq_len=model.seq_len),
         config_params=config.deepspeed_config_params,
     )
     print("deepspeed init done")
@@ -125,7 +125,7 @@ if __name__ == "__main__":
     # training loop
     optimization_step = 0
     while True:
-        for i in tqdm(range(0,config.bench_steps+config.bench_warmup+2)):
+        for i in tqdm(range(0,config.bench_steps+config.bench_warmup)):
             if optimization_step >= config.bench_steps + config.bench_warmup:
                 break
             elif optimization_step == config.bench_warmup:
