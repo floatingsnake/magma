@@ -71,7 +71,6 @@ def clip_encoder(
 
     # TODO better internet connection
     encoder = open_clip.create_model(name, device=device, precision="fp16" if "cuda" in str(device) else "fp32").visual  # , pretrained=pretrained).visual
-
     if "RN" in name:
         # remove attention pooling
         encoder.attnpool = Lambda(
@@ -98,7 +97,6 @@ def clip_encoder(
             x = x.permute(1, 0, 2)  # LND -> NLD
             return x
         encoder.forward = partial(forward, encoder)
-
 
     if device is not None:
         encoder = encoder.to(device)

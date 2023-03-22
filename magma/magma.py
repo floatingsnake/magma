@@ -42,7 +42,6 @@ class Magma(nn.Module):
         self.config = config
         self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
         self.seq_len = self.lm.config.max_position_embeddings
-
         self.tokenizer = get_tokenizer(config.lm_path if config.lm_path is not None else "gpt2", sequence_length=self.seq_len)
 
         self.image_token = self.tokenizer.cls_token_id
@@ -106,8 +105,7 @@ class Magma(nn.Module):
             for param in self.image_prefix.enc.parameters():
                 param.requires_grad = False
 
-        # added for CPU tests. No longer needed and leads to OOM on GPUs.
-        #self.lm.to(self.device)
+        # self.lm.to(self.device)
 
     def add_adapters(
         self,
@@ -262,7 +260,6 @@ class Magma(nn.Module):
         assert (
             captions.shape[1] == self.seq_len
         ), f"in training, captions should be padded to sequence length ({self.seq_len}), but are length {captions.shape[1]}"
-
         if input_embeddings is None:
             input_embeddings = self.image_prefix(images)
         labels = build_labels(

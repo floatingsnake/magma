@@ -105,12 +105,10 @@ class ImagePrefix(nn.Module):
 
         # pass through dropout and layer norm
         logits = self.dropout(logits)
-
         if self.use_layernorm:
             logits = self.ln(logits)
 
-        # Added for shape mismatch. No longer needed?
-        #if logits.ndim == 2:
-        #    logits = logits.unsqueeze(1)
+        if logits.ndim == 2:
+            logits = logits.unsqueeze(1)
 
         return logits

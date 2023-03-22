@@ -72,18 +72,26 @@ def get_pretraining_datasets(config, tokenizer, transforms):
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 if __name__ == "__main__":
-
+    
     # parse command line arguments:
     print('Starting and init distributd')
     args = parse_args()
-    # deepspeed.init_distributed()
-    init_distributed(args)
+    deepspeed.init_distributed()
     # load model + tokenizer:
     print('model creating')
+    local_rank = 0
+    for v in ('LOCAL_RANK','SLURM_LOCALID', 'MPI_LOCALRANKID', 'OMPI_COMM_WORLD_LOCAL_RANK'):
+        if v in os.environ:
+            local_rank = int(os.environ[v])
+            break
+    args.local_rank=local_rank
     model = Magma(
         args.config,
         device=torch.device("cuda", args.local_rank)
     )  # for finetuning one might want to load the model via Magma.from_checkpoint(...) here
+    device=torch.device("cuda",args.local_rank)
+    #device=torch.device("cuda", args.local_rank)
+    print("GPU used memory is {:.2f} GB".format(torch.cuda.max_memory_allocated(device)/1073741824))
     tokenizer, config, transforms = model.tokenizer, model.config, model.transforms
 
     # filter frozen from trainable parameters:
@@ -103,6 +111,8 @@ if __name__ == "__main__":
         betas=(0.9, 0.95),
         weight_decay=config.weight_decay,
     )
+    print('after init opt, data, model')
+    print("GPU used memory is {:.2f} GB".format(torch.cuda.max_memory_allocated(device)/1073741824))
 
     model_engine, opt, train_loader, lr_scheduler = deepspeed.initialize(
         args=args,
@@ -113,6 +123,9 @@ if __name__ == "__main__":
         collate_fn=partial(collate_fn, seq_len=model.seq_len),
         config_params=config.deepspeed_config_params,
     )
+    print("deepspeed init done")
+    print("GPU used memory is {:.2f} GB".format(torch.cuda.max_memory_allocated(device)/1073741824))
+
     eval_loader = cycle(model_engine.deepspeed_io(eval_dataset))
     train_loader = cycle(train_loader)
 
@@ -141,6 +154,7 @@ if __name__ == "__main__":
         project=config.wandb_project,
         name=config.name or wandb.util.generate_id(),
         config=config,
+        dir=os.environ['WANDB_DIR']
     )
 
     # training loop

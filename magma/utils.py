@@ -76,6 +76,34 @@ def parse_args():
         default=-1,
         help="local rank passed from distributed launcher",
     )
+    parser.add_argument(
+        "--train-data",
+        type=str,
+        default="/gpfs/alpine/csc499/proj-shared/LAION-400m-webdataset/data/{00000..41455}.tar",
+        help="Path to csv filewith training data",
+    )
+    parser.add_argument(
+        "--dataset-resampled",
+        default=False,
+        action="store_true",
+        help="Whether to use sampling with replacement for webdataset shard selection."
+    )
+    parser.add_argument(
+        "--train-num-samples",
+        type=int,
+        default=407332084,
+        help="Number of samples in dataset. Required for webdataset if not available in info file.",
+    )
+    parser.add_argument(
+        "--seed", type=int, default=0, help="Default random seed."
+    )
+    parser.add_argument(
+        "--batch-size", type=int, default=4, help="Batch size per GPU."
+    )
+    parser.add_argument(
+        "--workers", type=int, default=4, help="Number of dataloader workers per GPU."
+    )
+    
     deepspeed.add_config_arguments(parser)
 
     args = parser.parse_args()
@@ -352,9 +380,6 @@ def build_labels(
     Additionally, masks out everything *after* the first eos token.
     """
     shape = input_embeddings.shape[:2]  # b, s
-
-    print(f'captions: {captions.shape[1]}')
-    print(f'default: {shape[1]}')
     assert captions.shape[1] >= shape[1]
 
     # make sure to add masked embedding tokens in the appropriate locations in the labels

@@ -1,0 +1,6035 @@
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+[2023-03-21 20:48:00,848] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:48:00,848] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:48:00,848] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:48:00,848] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:48:00,848] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:48:00,848] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+[2023-03-21 20:48:01,216] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:48:01,216] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:48:01,216] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:48:01,216] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:48:01,216] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:48:01,217] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+[2023-03-21 20:48:01,933] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:48:01,933] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:48:01,933] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:48:01,933] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:48:01,933] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:48:01,933] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+[2023-03-21 20:48:03,703] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:48:03,703] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:48:03,703] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:48:03,703] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:48:03,703] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:48:03,703] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=1, local_rank=1, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=7, local_rank=1, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=5, local_rank=5, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=6, local_rank=0, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=18, local_rank=0, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=2, local_rank=2, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=9, local_rank=3, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=19, local_rank=1, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=4, local_rank=4, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=10, local_rank=4, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=21, local_rank=3, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=3, local_rank=3, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=11, local_rank=5, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=20, local_rank=2, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=0, local_rank=0, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=8, local_rank=2, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=22, local_rank=4, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,377] [INFO] [comm.py:657:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=23, local_rank=5, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=16, local_rank=4, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=12, local_rank=0, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=14, local_rank=2, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=13, local_rank=1, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=17, local_rank=5, world_size=24, master_addr=10.134.3.132, master_port=29500
+[2023-03-21 20:48:04,376] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=15, local_rank=3, world_size=24, master_addr=10.134.3.132, master_port=29500
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+Loading NeoX language model...
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+GPU used memory is 2.52 GB
+GPU used memory is 2.52 GB
+GPU used memory is 2.52 GB
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+GPU used memory is 2.52 GB
+GPU used memory is 2.52 GB
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+GPU used memory is 2.52 GB
+GPU used memory is 2.52 GB
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+GPU used memory is 2.52 GB
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+[2023-03-21 20:53:55,918] [INFO] [logging.py:75:log_dist] [Rank 0] DeepSpeed info: version=0.8.2+8710f051, git-hash=8710f051, git-branch=master
+GPU used memory is 2.52 GB
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+GPU used memory is 2.52 GB
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+GPU used memory is 2.52 GB
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+GPU used memory is 2.52 GB
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+after init opt, data, model
+GPU used memory is 2.52 GB
+[2023-03-21 20:53:59,347] [INFO] [logging.py:75:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2023-03-21 20:53:59,348] [INFO] [logging.py:75:log_dist] [Rank 0] Removing param_group that has no 'params' in the client Optimizer
+[2023-03-21 20:53:59,348] [INFO] [logging.py:75:log_dist] [Rank 0] Using client Optimizer as basic optimizer
+[2023-03-21 20:53:59,464] [INFO] [logging.py:75:log_dist] [Rank 0] DeepSpeed Basic Optimizer = AdamW
+[2023-03-21 20:53:59,464] [INFO] [utils.py:53:is_zero_supported_optimizer] Checking ZeRO support for optimizer=AdamW type=<class 'torch.optim.adamw.AdamW'>
+[2023-03-21 20:53:59,464] [INFO] [logging.py:75:log_dist] [Rank 0] Creating torch.float16 ZeRO stage 2 optimizer
+[2023-03-21 20:53:59,465] [INFO] [stage_1_and_2.py:144:__init__] Reduce bucket size 500,000,000
+[2023-03-21 20:53:59,465] [INFO] [stage_1_and_2.py:145:__init__] Allgather bucket size 500,000,000
+[2023-03-21 20:53:59,465] [INFO] [stage_1_and_2.py:146:__init__] CPU Offload: False
+[2023-03-21 20:53:59,465] [INFO] [stage_1_and_2.py:147:__init__] Round robin gradient partitioning: False
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Emitting ninja build file /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/utils/build.ninja...
+Building extension module utils...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Loading extension module utils...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Time to load utils op: 0.28255176544189453 seconds
+Emitting ninja build file /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/utils/build.ninja...
+Building extension module utils...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Loading extension module utils...
+Time to load utils op: 0.10934209823608398 seconds
+Loading extension module utils...
+Loading extension module utils...
+Loading extension module utils...
+Loading extension module utils...
+Loading extension module utils...
+Time to load utils op: 0.12399649620056152 seconds
+Time to load utils op: 0.12280774116516113 seconds
+Time to load utils op: 0.12369966506958008 seconds
+Time to load utils op: 0.12358832359313965 seconds
+Time to load utils op: 0.12353968620300293 seconds
+Loading extension module utils...
+Loading extension module utils...
+Loading extension module utils...
+Loading extension module utils...
+Loading extension module utils...
+Loading extension module utils...
+Loading extension module utils...
+Loading extension module utils...
+Loading extension module utils...
+Loading extension module utils...
+Loading extension module utils...
+Time to load utils op: 0.39391469955444336 seconds
+Time to load utils op: 0.3944580554962158 seconds
+Time to load utils op: 0.3949441909790039 seconds
+Time to load utils op: 0.3946871757507324 seconds
+Time to load utils op: 0.39449572563171387 seconds
+Time to load utils op: 0.3429732322692871 seconds
+Time to load utils op: 0.34284305572509766 seconds
+Time to load utils op: 0.34338855743408203 seconds
+Time to load utils op: 0.34322333335876465 seconds
+Time to load utils op: 0.34279727935791016 seconds
+Time to load utils op: 0.3434600830078125 seconds
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Rank: 21 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+Rank: 20 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+Rank: 23 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+Rank: 2 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+Rank: 14 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+Rank: 17 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+Rank: 5 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+Emitting ninja build file /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/utils/build.ninja...
+Building extension module utils...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+Rank: 22 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+ninja: no work to do.
+Loading extension module utils...
+Time to load utils op: 0.3738746643066406 seconds
+Rank: 19 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+Rank: 18 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+Loading extension module utils...
+Loading extension module utils...
+Loading extension module utils...
+Loading extension module utils...
+Loading extension module utils...
+Time to load utils op: 0.45697021484375 seconds
+Time to load utils op: 0.456967830657959 seconds
+Time to load utils op: 0.4570343494415283 seconds
+Time to load utils op: 0.4579591751098633 seconds
+Time to load utils op: 0.4578540325164795 seconds
+Rank: 13 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+Rank: 12 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+Rank: 16 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+Rank: 15 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+Rank: 1 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+Rank: 3 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+Rank: 0 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+Rank: 4 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+Rank: 11 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+Rank: 7 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+Rank: 8 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+Rank: 6 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+Rank: 9 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+Rank: 10 partition count [24, 24] and sizes[(26336534, False), (2988300, False)] 
+[2023-03-21 20:54:05,668] [INFO] [utils.py:829:see_memory_usage] Before initializing optimizer states
+[2023-03-21 20:54:05,669] [INFO] [utils.py:830:see_memory_usage] MA 1.45 GB         Max_MA 2.56 GB         CA 1.53 GB         Max_CA 3 GB 
+[2023-03-21 20:54:05,670] [INFO] [utils.py:838:see_memory_usage] CPU Virtual Memory:  used = 86.35 GB, percent = 14.3%
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+Time to load utils op: 0.0030388832092285156 seconds
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+deepspeed init done
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+Time to load utils op: 0.003520488739013672 seconds
+deepspeed init done
+Time to load utils op: 0.0032486915588378906 seconds
+deepspeed init done
+Time to load utils op: 0.0036725997924804688 seconds
+deepspeed init done
+Time to load utils op: 0.003769397735595703 seconds
+deepspeed init done
+GPU used memory is 2.56 GB
+GPU used memory is 2.56 GB
+GPU used memory is 2.56 GB
+GPU used memory is 2.56 GB
+GPU used memory is 2.56 GB
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+Time to load utils op: 0.0007278919219970703 seconds
+deepspeed init done
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+Time to load utils op: 0.0005481243133544922 seconds
+Time to load utils op: 0.0007655620574951172 seconds
+deepspeed init done
+deepspeed init done
+GPU used memory is 2.56 GB
+GPU used memory is 2.56 GB
+GPU used memory is 2.56 GB
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+Time to load utils op: 0.0007710456848144531 seconds
+deepspeed init done
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+Time to load utils op: 0.0009379386901855469 seconds
+deepspeed init done
+Time to load utils op: 0.0007765293121337891 seconds
+deepspeed init done
+GPU used memory is 2.56 GB
+GPU used memory is 2.56 GB
+GPU used memory is 2.56 GB
+[2023-03-21 20:54:05,756] [INFO] [utils.py:829:see_memory_usage] After initializing optimizer states
+[2023-03-21 20:54:05,757] [INFO] [utils.py:830:see_memory_usage] MA 1.66 GB         Max_MA 1.95 GB         CA 2.03 GB         Max_CA 2 GB 
+[2023-03-21 20:54:05,758] [INFO] [utils.py:838:see_memory_usage] CPU Virtual Memory:  used = 87.48 GB, percent = 14.5%
+[2023-03-21 20:54:05,758] [INFO] [stage_1_and_2.py:527:__init__] optimizer state initialized
+[2023-03-21 20:54:05,820] [INFO] [utils.py:829:see_memory_usage] After initializing ZeRO optimizer
+[2023-03-21 20:54:05,821] [INFO] [utils.py:830:see_memory_usage] MA 1.66 GB         Max_MA 1.66 GB         CA 2.03 GB         Max_CA 2 GB 
+[2023-03-21 20:54:05,821] [INFO] [utils.py:838:see_memory_usage] CPU Virtual Memory:  used = 87.81 GB, percent = 14.6%
+[2023-03-21 20:54:05,823] [INFO] [logging.py:75:log_dist] [Rank 0] DeepSpeed Final Optimizer = AdamW
+[2023-03-21 20:54:05,823] [INFO] [logging.py:75:log_dist] [Rank 0] DeepSpeed using configured LR scheduler = WarmupDecayLR
+[2023-03-21 20:54:05,823] [INFO] [logging.py:75:log_dist] [Rank 0] DeepSpeed LR Scheduler = <deepspeed.runtime.lr_schedules.WarmupDecayLR object at 0x200093ef42b0>
+[2023-03-21 20:54:05,824] [INFO] [logging.py:75:log_dist] [Rank 0] step=0, skipped=0, lr=[2e-06, 0.0008], mom=[(0.9, 0.95), (0.9, 0.95)]
+[2023-03-21 20:54:05,825] [INFO] [config.py:1009:print] DeepSpeedEngine configuration:
+[2023-03-21 20:54:05,826] [INFO] [config.py:1013:print]   activation_checkpointing_config  {
+    "partition_activations": false, 
+    "contiguous_memory_optimization": false, 
+    "cpu_checkpointing": false, 
+    "number_checkpoints": null, 
+    "synchronize_checkpoint_boundary": false, 
+    "profile": false
+}
+[2023-03-21 20:54:05,826] [INFO] [config.py:1013:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+[2023-03-21 20:54:05,826] [INFO] [config.py:1013:print]   amp_enabled .................. False
+[2023-03-21 20:54:05,826] [INFO] [config.py:1013:print]   amp_params ................... False
+[2023-03-21 20:54:05,826] [INFO] [config.py:1013:print]   autotuning_config ............ {
+    "enabled": false, 
+    "start_step": null, 
+    "end_step": null, 
+    "metric_path": null, 
+    "arg_mappings": null, 
+    "metric": "throughput", 
+    "model_info": null, 
+    "results_dir": "autotuning_results", 
+    "exps_dir": "autotuning_exps", 
+    "overwrite": true, 
+    "fast": true, 
+    "start_profile_step": 3, 
+    "end_profile_step": 5, 
+    "tuner_type": "gridsearch", 
+    "tuner_early_stopping": 5, 
+    "tuner_num_trials": 50, 
+    "model_info_path": null, 
+    "mp_size": 1, 
+    "max_train_batch_size": null, 
+    "min_train_batch_size": 1, 
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+    "min_train_micro_batch_size_per_gpu": 1, 
+    "num_tuning_micro_batch_sizes": 3
+}
+[2023-03-21 20:54:05,826] [INFO] [config.py:1013:print]   bfloat16_enabled ............. False
+[2023-03-21 20:54:05,826] [INFO] [config.py:1013:print]   checkpoint_parallel_write_pipeline  False
+[2023-03-21 20:54:05,826] [INFO] [config.py:1013:print]   checkpoint_tag_validation_enabled  True
+[2023-03-21 20:54:05,826] [INFO] [config.py:1013:print]   checkpoint_tag_validation_fail  False
+[2023-03-21 20:54:05,826] [INFO] [config.py:1013:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x200093ef47c0>
+[2023-03-21 20:54:05,826] [INFO] [config.py:1013:print]   communication_data_type ...... None
+[2023-03-21 20:54:05,826] [INFO] [config.py:1013:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2023-03-21 20:54:05,826] [INFO] [config.py:1013:print]   curriculum_enabled_legacy .... False
+[2023-03-21 20:54:05,826] [INFO] [config.py:1013:print]   curriculum_params_legacy ..... False
+[2023-03-21 20:54:05,827] [INFO] [config.py:1013:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2023-03-21 20:54:05,827] [INFO] [config.py:1013:print]   data_efficiency_enabled ...... False
+[2023-03-21 20:54:05,827] [INFO] [config.py:1013:print]   dataloader_drop_last ......... False
+[2023-03-21 20:54:05,827] [INFO] [config.py:1013:print]   disable_allgather ............ False
+[2023-03-21 20:54:05,827] [INFO] [config.py:1013:print]   dump_state ................... False
+[2023-03-21 20:54:05,827] [INFO] [config.py:1013:print]   dynamic_loss_scale_args ...... {'init_scale': 65536, 'scale_window': 250, 'delayed_shift': 2, 'min_scale': 1}
+[2023-03-21 20:54:05,827] [INFO] [config.py:1013:print]   eigenvalue_enabled ........... False
+[2023-03-21 20:54:05,827] [INFO] [config.py:1013:print]   eigenvalue_gas_boundary_resolution  1
+[2023-03-21 20:54:05,827] [INFO] [config.py:1013:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2023-03-21 20:54:05,827] [INFO] [config.py:1013:print]   eigenvalue_layer_num ......... 0
+[2023-03-21 20:54:05,827] [INFO] [config.py:1013:print]   eigenvalue_max_iter .......... 100
+[2023-03-21 20:54:05,827] [INFO] [config.py:1013:print]   eigenvalue_stability ......... 1e-06
+[2023-03-21 20:54:05,827] [INFO] [config.py:1013:print]   eigenvalue_tol ............... 0.01
+[2023-03-21 20:54:05,827] [INFO] [config.py:1013:print]   eigenvalue_verbose ........... False
+[2023-03-21 20:54:05,827] [INFO] [config.py:1013:print]   elasticity_enabled ........... False
+[2023-03-21 20:54:05,827] [INFO] [config.py:1013:print]   flops_profiler_config ........ {
+    "enabled": false, 
+    "profile_step": 1, 
+    "module_depth": -1, 
+    "top_modules": 1, 
+    "detailed": true, 
+    "output_file": null
+}
+[2023-03-21 20:54:05,827] [INFO] [config.py:1013:print]   fp16_auto_cast ............... False
+[2023-03-21 20:54:05,827] [INFO] [config.py:1013:print]   fp16_enabled ................. True
+[2023-03-21 20:54:05,827] [INFO] [config.py:1013:print]   fp16_master_weights_and_gradients  False
+[2023-03-21 20:54:05,827] [INFO] [config.py:1013:print]   global_rank .................. 0
+[2023-03-21 20:54:05,827] [INFO] [config.py:1013:print]   grad_accum_dtype ............. None
+[2023-03-21 20:54:05,827] [INFO] [config.py:1013:print]   gradient_accumulation_steps .. 1
+[2023-03-21 20:54:05,828] [INFO] [config.py:1013:print]   gradient_clipping ............ 1.0
+[2023-03-21 20:54:05,828] [INFO] [config.py:1013:print]   gradient_predivide_factor .... 1.0
+[2023-03-21 20:54:05,828] [INFO] [config.py:1013:print]   initial_dynamic_scale ........ 65536
+[2023-03-21 20:54:05,828] [INFO] [config.py:1013:print]   load_universal_checkpoint .... False
+[2023-03-21 20:54:05,828] [INFO] [config.py:1013:print]   loss_scale ................... 0
+[2023-03-21 20:54:05,828] [INFO] [config.py:1013:print]   memory_breakdown ............. False
+[2023-03-21 20:54:05,828] [INFO] [config.py:1013:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') enabled=False
+[2023-03-21 20:54:05,828] [INFO] [config.py:1013:print]   nebula_config ................ {
+    "enabled": false, 
+    "persistent_storage_path": null, 
+    "persistent_time_interval": 100, 
+    "num_of_version_in_retention": 2, 
+    "enable_nebula_load": true, 
+    "load_path": null
+}
+[2023-03-21 20:54:05,828] [INFO] [config.py:1013:print]   optimizer_legacy_fusion ...... False
+[2023-03-21 20:54:05,828] [INFO] [config.py:1013:print]   optimizer_name ............... None
+[2023-03-21 20:54:05,828] [INFO] [config.py:1013:print]   optimizer_params ............. None
+[2023-03-21 20:54:05,828] [INFO] [config.py:1013:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0}
+[2023-03-21 20:54:05,828] [INFO] [config.py:1013:print]   pld_enabled .................. False
+[2023-03-21 20:54:05,828] [INFO] [config.py:1013:print]   pld_params ................... False
+[2023-03-21 20:54:05,828] [INFO] [config.py:1013:print]   prescale_gradients ........... False
+[2023-03-21 20:54:05,828] [INFO] [config.py:1013:print]   scheduler_name ............... WarmupDecayLR
+[2023-03-21 20:54:05,828] [INFO] [config.py:1013:print]   scheduler_params ............. {'total_num_steps': 300000, 'warmup_min_lr': [0.0, 0.0], 'warmup_max_lr': [2e-06, 0.0008], 'warmup_num_steps': 100}
+[2023-03-21 20:54:05,828] [INFO] [config.py:1013:print]   sparse_attention ............. None
+[2023-03-21 20:54:05,828] [INFO] [config.py:1013:print]   sparse_gradients_enabled ..... False
+[2023-03-21 20:54:05,829] [INFO] [config.py:1013:print]   steps_per_print .............. 10
+[2023-03-21 20:54:05,829] [INFO] [config.py:1013:print]   train_batch_size ............. 48
+[2023-03-21 20:54:05,829] [INFO] [config.py:1013:print]   train_micro_batch_size_per_gpu  2
+[2023-03-21 20:54:05,829] [INFO] [config.py:1013:print]   use_node_local_storage ....... False
+[2023-03-21 20:54:05,829] [INFO] [config.py:1013:print]   wall_clock_breakdown ......... False
+[2023-03-21 20:54:05,829] [INFO] [config.py:1013:print]   world_size ................... 24
+[2023-03-21 20:54:05,829] [INFO] [config.py:1013:print]   zero_allow_untested_optimizer  False
+[2023-03-21 20:54:05,829] [INFO] [config.py:1013:print]   zero_config .................. stage=2 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500,000,000 allgather_partitions=True allgather_bucket_size=500,000,000 overlap_comm=False load_from_fp32_weights=False elastic_checkpoint=False offload_param=None offload_optimizer=None sub_group_size=1,000,000,000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50,000,000 param_persistence_threshold=100,000 model_persistence_threshold=sys.maxsize max_live_parameters=1,000,000,000 max_reuse_distance=1,000,000,000 gather_16bit_weights_on_model_save=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False
+[2023-03-21 20:54:05,829] [INFO] [config.py:1013:print]   zero_enabled ................. True
+[2023-03-21 20:54:05,829] [INFO] [config.py:1013:print]   zero_optimization_stage ...... 2
+[2023-03-21 20:54:05,829] [INFO] [config.py:998:print_user_config]   json = {
+    "train_batch_size": 48, 
+    "gradient_accumulation_steps": 1, 
+    "gradient_clipping": 1.0, 
+    "fp16": {
+        "enabled": true, 
+        "loss_scale_window": 250
+    }, 
+    "scheduler": {
+        "type": "WarmupDecayLR", 
+        "params": {
+            "total_num_steps": 3.000000e+05, 
+            "warmup_min_lr": [0.0, 0.0], 
+            "warmup_max_lr": [2e-06, 0.0008], 
+            "warmup_num_steps": 100
+        }
+    }, 
+    "zero_optimization": {
+        "stage": 2, 
+        "load_from_fp32_weights": false
+    }
+}
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+Time to load utils op: 0.0006704330444335938 seconds
+deepspeed init done
+GPU used memory is 1.66 GB
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+Time to load utils op: 0.0008065700531005859 seconds
+deepspeed init done
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+Time to load utils op: 0.0007658004760742188 seconds
+deepspeed init done
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+Time to load utils op: 0.0013082027435302734 seconds
+deepspeed init done
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+Time to load utils op: 0.0006668567657470703 seconds
+deepspeed init done
+GPU used memory is 2.56 GB
+Time to load utils op: 0.0005891323089599609 seconds
+deepspeed init done
+Time to load utils op: 0.0012853145599365234 seconds
+deepspeed init done
+GPU used memory is 2.56 GB
+GPU used memory is 2.56 GB
+GPU used memory is 2.56 GB
+GPU used memory is 2.56 GB
+GPU used memory is 2.56 GB
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+Using /gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/ as PyTorch extensions root...
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+Time to load utils op: 0.0011746883392333984 seconds
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+Time to load utils op: 0.00136566162109375 seconds
+deepspeed init doneTime to load utils op: 0.0008990764617919922 seconds
+deepspeed init done
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+Time to load utils op: 0.0008556842803955078 seconds
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+Time to load utils op: 0.0008590221405029297 seconds
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+Time to load utils op: 0.0008766651153564453 seconds
+GPU used memory is 2.56 GB
+deepspeed init done
+deepspeed init done
+deepspeed init done
+
+GPU used memory is 2.56 GB
+GPU used memory is 2.56 GB
+GPU used memory is 2.56 GB
+GPU used memory is 2.56 GB
+deepspeed init done
+GPU used memory is 2.56 GB
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048captions: 2048captions: 2048captions: 2048captions: 2048
+default: 1
+
+default: 1
+
+default: 1
+
+default: 1
+captions: 2048
+default: 1
+
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+[2023-03-21 20:54:27,349] [INFO] [stage_1_and_2.py:1769:step] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 65536, reducing to 65536
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,354] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+[2023-03-21 20:54:27,827] [INFO] [stage_1_and_2.py:1769:step] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 65536, reducing to 32768.0
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:27,830] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048captions: 2048
+default: 1
+captions: 2048
+default: 1
+
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+[2023-03-21 20:54:28,259] [INFO] [stage_1_and_2.py:1769:step] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 32768.0, reducing to 16384.0
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,261] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+captions: 2048
+default: 1
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+[2023-03-21 20:54:28,730] [INFO] [stage_1_and_2.py:1769:step] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 16384.0, reducing to 8192.0
+[2023-03-21 20:54:28,732] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,732] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,732] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,732] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,732] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,732] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,733] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,732] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,733] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,732] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,732] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,732] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,733] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,732] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,732] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,732] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,733] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,733] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,732] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,732] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,732] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,732] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,732] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:28,733] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+[2023-03-21 20:54:29,202] [INFO] [stage_1_and_2.py:1769:step] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 8192.0, reducing to 4096.0
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+[2023-03-21 20:54:29,205] [WARNING] [lr_schedules.py:751:get_lr] Attempting to get learning rate from scheduler before it has started
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+[2023-03-21 20:54:30,284] [INFO] [stage_1_and_2.py:1769:step] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048captions: 2048
+default: 1
+
+default: 1
+[2023-03-21 20:54:30,659] [INFO] [stage_1_and_2.py:1769:step] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+[2023-03-21 20:54:31,042] [INFO] [stage_1_and_2.py:1769:step] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 1024.0, reducing to 512.0
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+[2023-03-21 20:54:31,445] [INFO] [logging.py:75:log_dist] [Rank 0] step=10, skipped=8, lr=[3.010299956639811e-07, 0.00012041199826559246], mom=[(0.9, 0.95), (0.9, 0.95)]
+[2023-03-21 20:54:31,622] [INFO] [timer.py:198:stop] epoch=0/micro_step=10/global_step=10, RunningAvgSamplesPerSec=103.83446547205756, CurrSamplesPerSec=84.81358725461864, MemAllocated=2.17GB, MaxMemAllocated=7.72GB
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+[2023-03-21 20:54:37,284] [INFO] [logging.py:75:log_dist] [Rank 0] step=20, skipped=8, lr=[1.0791812460476246e-06, 0.00043167249841904987], mom=[(0.9, 0.95), (0.9, 0.95)]
+[2023-03-21 20:54:37,461] [INFO] [timer.py:198:stop] epoch=0/micro_step=20/global_step=20, RunningAvgSamplesPerSec=91.74482025046112, CurrSamplesPerSec=84.35028775025222, MemAllocated=2.17GB, MaxMemAllocated=7.72GB
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+[2023-03-21 20:54:43,481] [INFO] [logging.py:75:log_dist] [Rank 0] step=30, skipped=8, lr=[1.3424226808222062e-06, 0.0005369690723288825], mom=[(0.9, 0.95), (0.9, 0.95)]
+[2023-03-21 20:54:43,658] [INFO] [timer.py:198:stop] epoch=0/micro_step=30/global_step=30, RunningAvgSamplesPerSec=86.92475201869348, CurrSamplesPerSec=84.77326756728647, MemAllocated=2.17GB, MaxMemAllocated=7.72GB
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+[2023-03-21 20:54:49,319] [INFO] [logging.py:75:log_dist] [Rank 0] step=40, skipped=8, lr=[1.5051499783199057e-06, 0.0006020599913279624], mom=[(0.9, 0.95), (0.9, 0.95)]
+[2023-03-21 20:54:49,496] [INFO] [timer.py:198:stop] epoch=0/micro_step=40/global_step=40, RunningAvgSamplesPerSec=86.12557441409298, CurrSamplesPerSec=85.13778277720571, MemAllocated=2.17GB, MaxMemAllocated=7.72GB
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+[2023-03-21 20:54:55,304] [INFO] [logging.py:75:log_dist] [Rank 0] step=50, skipped=8, lr=[1.6232492903979003e-06, 0.0006492997161591602], mom=[(0.9, 0.95), (0.9, 0.95)]
+[2023-03-21 20:54:55,482] [INFO] [timer.py:198:stop] epoch=0/micro_step=50/global_step=50, RunningAvgSamplesPerSec=85.21720529494517, CurrSamplesPerSec=84.94230213441557, MemAllocated=2.17GB, MaxMemAllocated=7.72GB
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+[2023-03-21 20:55:01,332] [INFO] [logging.py:75:log_dist] [Rank 0] step=60, skipped=8, lr=[1.716003343634799e-06, 0.0006864013374539196], mom=[(0.9, 0.95), (0.9, 0.95)]
+[2023-03-21 20:55:01,509] [INFO] [timer.py:198:stop] epoch=0/micro_step=60/global_step=60, RunningAvgSamplesPerSec=84.50973574405378, CurrSamplesPerSec=84.814373315943, MemAllocated=2.17GB, MaxMemAllocated=7.72GB
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+[2023-03-21 20:55:07,134] [INFO] [logging.py:75:log_dist] [Rank 0] step=70, skipped=8, lr=[1.7923916894982536e-06, 0.0007169566757993015], mom=[(0.9, 0.95), (0.9, 0.95)]
+[2023-03-21 20:55:07,310] [INFO] [timer.py:198:stop] epoch=0/micro_step=70/global_step=70, RunningAvgSamplesPerSec=84.51452107152016, CurrSamplesPerSec=85.03486560310394, MemAllocated=2.17GB, MaxMemAllocated=7.72GB
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+[2023-03-21 20:55:13,047] [INFO] [logging.py:75:log_dist] [Rank 0] step=80, skipped=8, lr=[1.857332496431268e-06, 0.0007429329985725073], mom=[(0.9, 0.95), (0.9, 0.95)]
+[2023-03-21 20:55:13,215] [INFO] [timer.py:198:stop] epoch=0/micro_step=80/global_step=80, RunningAvgSamplesPerSec=84.33896628254864, CurrSamplesPerSec=74.48104776146128, MemAllocated=2.17GB, MaxMemAllocated=7.72GB
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+[2023-03-21 20:55:19,169] [INFO] [logging.py:75:log_dist] [Rank 0] step=90, skipped=8, lr=[1.9138138523837166e-06, 0.0007655255409534866], mom=[(0.9, 0.95), (0.9, 0.95)]
+[2023-03-21 20:55:19,346] [INFO] [timer.py:198:stop] epoch=0/micro_step=90/global_step=90, RunningAvgSamplesPerSec=83.84575900325206, CurrSamplesPerSec=84.7358392411904, MemAllocated=2.17GB, MaxMemAllocated=7.72GB
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+[2023-03-21 20:55:24,966] [INFO] [logging.py:75:log_dist] [Rank 0] step=100, skipped=8, lr=[1.963787827345555e-06, 0.000785515130938222], mom=[(0.9, 0.95), (0.9, 0.95)]
+[2023-03-21 20:55:25,143] [INFO] [timer.py:198:stop] epoch=0/micro_step=100/global_step=100, RunningAvgSamplesPerSec=83.92058270589744, CurrSamplesPerSec=85.06159581178731, MemAllocated=2.17GB, MaxMemAllocated=7.72GB
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+captions: 2048
+default: 1
+[2023-03-21 20:55:30,747] [INFO] [logging.py:75:log_dist] [Rank 0] step=110, skipped=8, lr=[1.99999333111037e-06, 0.000799997332444148], mom=[(0.9, 0.95), (0.9, 0.95)]
+[2023-03-21 20:55:30,922] [INFO] [timer.py:198:stop] epoch=0/micro_step=110/global_step=110, RunningAvgSamplesPerSec=84.01871806822443, CurrSamplesPerSec=85.47342840730924, MemAllocated=2.17GB, MaxMemAllocated=7.72GB
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch1>
+Subject: Job 2790396: <MMp> in cluster <summit> Exited
+
+Job <MMp> was submitted from host <login5> by user <lfsm> in cluster <summit> at Tue Mar 21 20:46:26 2023
+Job was executed on host(s) <1*batch1>, in queue <batch>, as user <lfsm> in cluster <summit> at Tue Mar 21 20:47:28 2023
+                            <42*b08n17>
+                            <42*b33n08>
+                            <42*e08n10>
+                            <42*e08n11>
+</ccs/home/lfsm> was used as the home directory.
+</ccs/home/lfsm/code/magma> was used as the working directory.
+Started at Tue Mar 21 20:47:28 2023
+Terminated at Tue Mar 21 20:55:38 2023
+Results reported at Tue Mar 21 20:55:38 2023
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n4.out> for stderr output of this job.
+

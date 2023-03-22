@@ -3,7 +3,9 @@
     encoder_name: 'clip_resnet_large',
     adapter_config: {"mlp": {"adapter_type": "normal", "downsample_factor": 4}},
     freeze_img_encoder: false,
-    
+   
+    # language model settings
+    lm_name:"gptj",
     # train settings 
     batch_size: 256,
     train_steps: 150000,
@@ -21,9 +23,9 @@
 
     # dataset / save / load settings
     train_dataset_name: 'conceptual_captions',
-    train_dataset_dir: '/mnt/localdisk/conceptual_captions',
+    train_dataset_dir: '/gpfs/alpine/csc499/proj-shared/magma/flickr8k_processed',
     eval_dataset_name: 'coco',
-    eval_dataset_dir: '/mnt/localdisk/coco_data',
+    eval_dataset_dir: 'null',
     
     save: "/mnt/shared_vol/checkpoints/multimodal_transformer_rn50x16",
     load: "/mnt/shared_vol/checkpoints/multimodal_transformer_rn50x16",

@@ -24,9 +24,11 @@ class MultimodalConfig:
     # Training:
     # ------------------------------------------------------------
 
-    batch_size: int
-    train_steps: int
+    micro_batch_size: int
+    bench_warmup: int
+    bench_steps: int
     optimizer_name: str = "AdamW"
+    workers: int = 4
     lr: float = 8.0e-4
     image_enc_lr: float = None
     min_lr: float = 0.0
@@ -42,7 +44,8 @@ class MultimodalConfig:
     run_blind: bool = False
     fine_tune: bool = False
     load_optimizer: bool = True
-
+    dataset_resampled: bool = False
+    seed: int = 0
     # Language model:
     lm_name: str = "gptj"
     lm_path: Optional[str] = None
@@ -55,7 +58,8 @@ class MultimodalConfig:
 
     # Data:
     # ------------------------------------------------------------
-    train_dataset_name: str = "conceptual_captions"
+    train_data: str = "/gpfs/alpine/csc499/proj-shared/LAION-400m-webdataset/data/{00000..41455}.tar"
+    train_num_samples: int = 407332084
     eval_dataset_name: str = "/data/conceptual_captions"
     train_dataset_dir: str = "/data/coco_data"
     eval_dataset_dir: str = "/data/coco_data"

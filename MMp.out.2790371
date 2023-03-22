@@ -1,0 +1,122 @@
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+[2023-03-21 20:43:17,789] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:43:17,789] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:43:17,789] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:43:17,789] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:43:17,789] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:43:17,789] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+[2023-03-21 20:43:17,987] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:43:17,987] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:43:17,987] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:43:17,988] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:43:17,987] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:43:17,988] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+[2023-03-21 20:43:18,344] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:43:18,344] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:43:18,344] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:43:18,344] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:43:18,345] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:43:18,345] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+Starting and init distributd
+[2023-03-21 20:43:19,440] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:43:19,440] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:43:19,440] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:43:19,440] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:43:19,440] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:43:19,440] [INFO] [comm.py:639:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=22, local_rank=4, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=6, local_rank=0, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=18, local_rank=0, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=8, local_rank=2, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=3, local_rank=3, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=11, local_rank=5, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=1, local_rank=1, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=21, local_rank=3, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=20, local_rank=2, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=7, local_rank=1, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=12, local_rank=0, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=5, local_rank=5, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=19, local_rank=1, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=9, local_rank=3, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=23, local_rank=5, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=10, local_rank=4, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=13, local_rank=1, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=4, local_rank=4, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=15, local_rank=3, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=2, local_rank=2, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=17, local_rank=5, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,609] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=0, local_rank=0, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=14, local_rank=2, world_size=24, master_addr=10.134.20.19, master_port=29500
+[2023-03-21 20:43:20,609] [INFO] [comm.py:657:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2023-03-21 20:43:20,608] [INFO] [comm.py:693:mpi_discovery] Discovered MPI settings of world_rank=16, local_rank=4, world_size=24, master_addr=10.134.20.19, master_port=29500
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+model creating
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch3>
+Subject: Job 2790371: <MMp> in cluster <summit> Exited
+
+Job <MMp> was submitted from host <login5> by user <lfsm> in cluster <summit> at Tue Mar 21 20:41:03 2023
+Job was executed on host(s) <1*batch3>, in queue <batch>, as user <lfsm> in cluster <summit> at Tue Mar 21 20:42:42 2023
+                            <42*h25n11>
+                            <42*h25n15>
+                            <42*h26n03>
+                            <42*h29n03>
+</ccs/home/lfsm> was used as the home directory.
+</ccs/home/lfsm/code/magma> was used as the working directory.
+Started at Tue Mar 21 20:42:42 2023
+Terminated at Tue Mar 21 20:43:24 2023
+Results reported at Tue Mar 21 20:43:24 2023
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <n4.out> for stderr output of this job.
+
