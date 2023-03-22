@@ -7,68 +7,24 @@ from torch.utils.data import random_split, ConcatDataset
 from torch.optim import AdamW
 from tqdm import tqdm
 from functools import partial
-from magma.datasets import (
-    collate_fn,
-    ImgCptDataset,
-)
 from magma.magma import (
     Magma,
 )
 from magma.utils import (
-    is_main,
     cycle,
     parse_args,
     wandb_log,
     wandb_init,
-    save_model,
-    load_model,
     print_main,
     configure_param_groups,
 )
 from magma.webdataset import get_wds_dataset
 from magma.train_loop import (
-    eval_step,
-    inference_step,
     train_step,
 )
 from magma.distrubuted import(
     init_distributed             
 )
-
-def _load_img_cpt_datasets(dataset_dir, tokenizer, transforms):
-    if isinstance(dataset_dir, (list, tuple)):
-        return ConcatDataset(
-            [_load_img_cpt_datasets(d, tokenizer, transforms) for d in dataset_dir]
-        )
-    elif isinstance(dataset_dir, str):
-        return ImgCptDataset(dataset_dir, tokenizer=tokenizer, transforms=transforms)
-    else:
-        raise TypeError("dataset dir wrong type")
-
-
-def get_pretraining_datasets(config, tokenizer, transforms):
-    # if config.train_dataset_dir is a list, load all datasets + join together
-    train_dataset = _load_img_cpt_datasets(
-        config.train_dataset_dir, tokenizer, transforms
-    )
-    # if no dedicated eval sets are given, use a percentage of the train dataset
-    if config.eval_dataset_dir is None:
-        eval_len = int(len(train_dataset) * config.eval_dataset_pct)
-        train_len = len(train_dataset) - eval_len
-        print(
-            f"Randomly splitting train_dataset into two datasets of length {train_len} and {eval_len}"
-        )
-        train_dataset, eval_dataset = random_split(train_dataset, [train_len, eval_len])
-    else:
-        eval_dataset = _load_img_cpt_datasets(
-            config.eval_dataset_dir, tokenizer, transforms
-        )
-
-    print_main(f"Loaded train dataset with {len(train_dataset)} samples")
-    print_main(f"Loaded eval dataset with {len(eval_dataset)} samples")
-
-    return train_dataset, eval_dataset
-
 
 # tell tokenizers not to do parallelism
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
@@ -94,14 +50,16 @@ if __name__ == "__main__":
     
     # parse command line arguments:
     args = parse_args()
+    
+    # distrubited init
     deepspeed.init_distributed()
     args.local_rank, args.world_rank, args.world_size = world_info_from_env()
   	
+    device=torch.device("cuda",args.local_rank)
     model = Magma(
         args.config,
-        device=torch.device("cuda", args.local_rank)
+        device=device
     )  # for finetuning one might want to load the model via Magma.from_checkpoint(...) here
-    device=torch.device("cuda",args.local_rank)
     #device=torch.device("cuda", args.local_rank)
     print("GPU used memory is {:.2f} GB".format(torch.cuda.max_memory_allocated(device)/1073741824))
     tokenizer, config, transforms = model.tokenizer, model.config, model.transforms
