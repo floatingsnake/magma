@@ -121,7 +121,17 @@ if __name__ == "__main__":
 
     # training loop
     optimization_step = 0
-    while True:
+    with torch.profiler.profile(
+        schedule=torch.profiler.schedule(wait=2, warmup=5, active=10, repeat=3),
+        on_trace_ready=torch.profiler.tensorboard_trace_handler(os.environ['LOG_PATH']),
+        activities=[
+            torch.profiler.ProfilerActivity.CPU,
+            torch.profiler.ProfilerActivity.CUDA,
+        ],
+        record_shapes=True,
+        profile_memory=True,
+        with_stack=True
+	) as prof:       
         for i in tqdm(range(0,config.bench_steps+config.bench_warmup)):
             if optimization_step >= config.bench_steps + config.bench_warmup:
                 break
@@ -129,21 +139,9 @@ if __name__ == "__main__":
                 t0 = time.perf_counter()
             ##### train step
             loss = train_step(config, train_loader, model_engine)
-
+            prof.step()
             optimization_step += 1
-
-            if optimization_step % config.log_every == 0:
-                current_lr = (
-                    [lr for lr in lr_scheduler.get_lr()]
-                    if lr_scheduler is not None
-                    else config.lr
-                )
-                to_log = {"train/loss": loss, "train/lr": current_lr}
-                wandb_log(to_log, step=optimization_step)
-
-                model_engine.train()
-        if optimization_step >= config.bench_steps + config.bench_warmup:
-            break
+            model_engine.train()
     t = time.perf_counter()
     if args.world_rank == 0:
         print(f"Benchmarking completed in {t-t0} seconds.")
