@@ -1,0 +1,402 @@
+
+Lmod is automatically replacing "xl/16.1.1-10" with "gcc/10.2.0".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) spectrum-mpi/10.4.0.3-20210112
+
+
+Currently Loaded Modules:
+  1) lsf-tools/2.0                7) nsight-systems/2021.3.1.54
+  2) hsi/5.0.2.p5                 8) cuda/11.0.3
+  3) darshan-runtime/3.4.0-lite   9) gcc/10.2.0
+  4) xalt/1.2.1                  10) git/2.36.1
+  5) DefApps                     11) ninja/1.10.2
+  6) nsight-compute/2021.2.1     12) spectrum-mpi/10.4.0.3-20210112
+
+ 
+
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
+Traceback (most recent call last):
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/benchmark.py", line 57, in <module>
+    model = Magma(
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/magma.py", line 43, in __init__
+    self.lm = getattr(language_model, f"get_{config.lm_name}")(config.lm_path)
+  File "/autofs/nccs-svm1_home1/lfsm/code/magma/magma/language_model.py", line 76, in get_neox
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
+TypeError: from_pretrained() missing 1 required positional argument: 'pretrained_model_name_or_path'
