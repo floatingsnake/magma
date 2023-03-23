@@ -78,12 +78,8 @@ def get_neox(
     if gradient_checkpointing:
         config.use_cache = False
     config.model_device = "cpu"
-    from contextlib import redirect_stdout
-    import io
-
-    f = io.StringIO()
-    with no_init_weights(not init_weights):
-           model = GPTNeoXForCausalLM.from_pretrained(config._name_or_path, ignore_mismatched_sizes=True)
-           #model = GPTNeoXForCausalLM.from_pretrained(config._name_or_path, config=config, ignore_mismatched_sizes=True, force_download=True)
+    ### TODO additional config may serve for adapter?
+    model = GPTNeoXForCausalLM.from_pretrained(config._name_or_path, ignore_mismatched_sizes=True)
+    #model = GPTNeoXForCausalLM.from_pretrained(config._name_or_path, config=config, ignore_mismatched_sizes=True, force_download=True)
     return model
 

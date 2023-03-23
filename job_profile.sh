@@ -1,5 +1,12 @@
 #!/bin/bash
 
+#BSUB -P CSC499
+#BSUB -W 1:00
+#BSUB -nnodes 2
+#BSUB -J pf
+#BSUB -e pf.out.%J
+#BSUB -o n2_pf.out
+
 # compute node don't have write permisson and ability to connect internet
 export WANDB_DIR=/gpfs/alpine/scratch/lfsm/csc499/wandb
 export TORCH_EXTENSIONS_DIR=/gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/
@@ -19,7 +26,7 @@ conda activate gpt-neox-3.9
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/scratch/miniconda3/envs/gpt-neox-3.9/lib
 export LOG_PATH=/gpfs/alpine/scratch/lfsm/csc499/profiled_logs
 
-module load ninja
+
 NNODE=2
 export OMP_NUM_THREADS=1
 export WORLD_SIZE=$(($NNODE*6))

@@ -8,7 +8,7 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--config", type=str, required=False, help="path to your training config",
-	default='/ccs/home/lfsm/code/magma/configs/benchmark_n2.yml')
+	default='/ccs/home/lfsm/code/magma/configs/benchmark_mbs1.yml')
     parser.add_argument(
         "--train-data",
         type=str,
@@ -44,7 +44,7 @@ args.world_size=1
 model = Magma(
     args.config,
 )  # for finetuning one might want to load the model via Magma.from_checkpoint(...) here
-
+import pdb;pdb.set_trace()
 tokenizer, config, transforms = model.tokenizer, model.config, model.transforms
 def preprocess_text(text):
     return tokenizer.encode(

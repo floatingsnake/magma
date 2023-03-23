@@ -121,6 +121,7 @@ if __name__ == "__main__":
 
     # training loop
     optimization_step = 0
+    import pdb;pdb.set_trace()
     with torch.profiler.profile(
         schedule=torch.profiler.schedule(wait=2, warmup=5, active=10, repeat=3),
         on_trace_ready=torch.profiler.tensorboard_trace_handler(os.environ['LOG_PATH']),
