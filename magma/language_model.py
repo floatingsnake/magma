@@ -50,12 +50,6 @@ def get_gptj(
 
 def neox_config(path: Optional[str] = None):
     config = AutoConfig.from_pretrained(path if path is not None else "EleutherAI/pythia-19m")
-    config.attention_layers = ["global"] * 28
-    config.attention_types = [["global"], 28]
-    config.num_layers = 28
-    config.num_heads = 16
-    config.hidden_size = 256 * config.num_heads
-    config.vocab_size = 50400
     config.rotary = True
     config.rotary_dim = 64
     config.jax = True
@@ -79,7 +73,6 @@ def get_neox(
         config.use_cache = False
     config.model_device = "cpu"
     ### TODO additional config may serve for adapter?
-    model = GPTNeoXForCausalLM.from_pretrained(config._name_or_path, ignore_mismatched_sizes=True)
-    #model = GPTNeoXForCausalLM.from_pretrained(config._name_or_path, config=config, ignore_mismatched_sizes=True, force_download=True)
+    model = GPTNeoXForCausalLM.from_pretrained(config=config)
     return model
 

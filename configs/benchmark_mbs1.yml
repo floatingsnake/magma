@@ -6,7 +6,7 @@
 
     # language model settings
     lm_name: "neox",
-    lm_path: "EleutherAI/pythia-19m",
+    lm_path: "EleutherAI/pythia-70m-deduped",
 
     # train settings
     micro_batch_size: 1,
