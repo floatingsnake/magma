@@ -75,35 +75,7 @@ def parse_args():
         type=int,
         default=-1,
         help="local rank passed from distributed launcher",
-    )
-    parser.add_argument(
-        "--train-data",
-        type=str,
-        default="/gpfs/alpine/csc499/proj-shared/LAION-400m-webdataset/data/{00000..41455}.tar",
-        help="Path to csv filewith training data",
-    )
-    parser.add_argument(
-        "--dataset-resampled",
-        default=False,
-        action="store_true",
-        help="Whether to use sampling with replacement for webdataset shard selection."
-    )
-    parser.add_argument(
-        "--train-num-samples",
-        type=int,
-        default=407332084,
-        help="Number of samples in dataset. Required for webdataset if not available in info file.",
-    )
-    parser.add_argument(
-        "--seed", type=int, default=0, help="Default random seed."
-    )
-    parser.add_argument(
-        "--batch-size", type=int, default=4, help="Batch size per GPU."
-    )
-    parser.add_argument(
-        "--workers", type=int, default=4, help="Number of dataloader workers per GPU."
-    )
-    
+    )     
     deepspeed.add_config_arguments(parser)
 
     args = parser.parse_args()
@@ -285,24 +257,6 @@ def log_table(name, model_outputs, gt_answers_list, global_step):
     for o, gt in zip(model_outputs, gt_answers_list):
         results_table.add_data(o, gt)
     wandb_log({f"eval/{name}": results_table}, step=global_step)
-
-
-def get_world_info():
-    local_rank = int(os.environ["LOCAL_RANK"])
-    rank = int(os.environ["RANK"])
-    world_size = int(os.environ["WORLD_SIZE"])
-    return local_rank, rank, world_size
-
-
-def init_distributed(backend="nccl"):
-    if not torch.distributed.is_initialized():
-        deepspeed.init_distributed(
-            dist_backend=backend, verbose=True, auto_mpi_discovery=True
-        )
-    local_rank, rank, world_size = get_world_info()
-    torch.cuda.set_device(local_rank)
-    return local_rank, rank, world_size
-
 
 def collate_fn_classification(batch_data, seq_len=2048):
 

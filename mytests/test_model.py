@@ -30,17 +30,17 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--config", type=str, required=False, help="path to your training config",
-	default='/ccs/home/lfsm/code/magma/configs/benchmark_mbs1.yml')
+	default='/ccs/home/lfsm/code/magma/configs/benchmark_20b_mbs1.yml')
     args = parser.parse_args()
     return args
 
 if __name__ == "__main__":
     args=parse_args() 
-    deepspeed.init_distributed()
-    args.local_rank, args.world_rank, args.world_size = world_info_from_env()
+    #deepspeed.init_distributed()
+    #args.local_rank, args.world_rank, args.world_size = world_info_from_env()
     model = Magma(
 	args.config,
-	device=torch.device("cuda",args.local_rank)
+	#device=torch.device("cuda",args.local_rank)
     )  # for finetuning one might want to load the model via Magma.from_checkpoint(...) here
     tokenizer, config, transforms = model.tokenizer, model.config, model.transforms
     

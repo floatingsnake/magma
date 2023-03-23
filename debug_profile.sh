@@ -25,5 +25,5 @@ export OMP_NUM_THREADS=1
 export WORLD_SIZE=$(($NNODE*6))
 jsrun -n $NNODE -a 6 -c 6 -g 6 \
 python -u profile.py --deepspeed \
-  --config /ccs/home/lfsm/code/magma/configs/benchmark_mbs1.yml
+  --config /ccs/home/lfsm/code/magma/configs/profile_mbs1.yml
 
