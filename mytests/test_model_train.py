@@ -66,7 +66,6 @@ if __name__ == "__main__":
     images, captions = torch.Tensor(mbs,3,224,224).half().cuda(), torch.Tensor(mbs,2048).half().cuda()
     outputs = model_engine(images, captions)
     loss = outputs.loss
-    losses.append(loss)
     model_engine.backward(loss)
     model_engine.step()
 
