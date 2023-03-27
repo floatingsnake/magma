@@ -72,7 +72,6 @@ def get_neox(
     if gradient_checkpointing:
         config.use_cache = False
     config.model_device = "cpu"
-    ### TODO additional config may serve for adapter?
-    model = GPTNeoXForCausalLM.from_pretrained(config._name_or_path, config=config, cache_dir='/gpfs/alpine/scratch/lfsm/csc499/neox_weights')
+    model = GPTNeoXForCausalLM.from_pretrained(config._name_or_path, config=config)
     return model
 
