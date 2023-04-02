@@ -52,7 +52,9 @@ if __name__ == "__main__":
     # distrubited init
     deepspeed.init_distributed()
     args.local_rank, args.world_rank, args.world_size = world_info_from_env()
-  	
+   
+    device_count = torch.cuda.device_count()
+    args.local_rank = args.local_rank % device_count
     device=torch.device("cuda",args.local_rank)
     model = Magma(
         args.config,
@@ -121,17 +123,7 @@ if __name__ == "__main__":
 
     # training loop
     optimization_step = 0
-    with torch.profiler.profile(
-        schedule=torch.profiler.schedule(wait=2, warmup=5, active=10, repeat=3),
-        on_trace_ready=torch.profiler.tensorboard_trace_handler(os.environ['LOG_PATH']),
-        activities=[
-            torch.profiler.ProfilerActivity.CPU,
-            torch.profiler.ProfilerActivity.CUDA,
-        ],
-        record_shapes=True,
-        profile_memory=True,
-        with_stack=True
-	) as prof:       
+    while True:
         for i in tqdm(range(0,config.bench_steps+config.bench_warmup)):
             if optimization_step >= config.bench_steps + config.bench_warmup:
                 break
@@ -139,9 +131,21 @@ if __name__ == "__main__":
                 t0 = time.perf_counter()
             ##### train step
             loss = train_step(config, train_loader, model_engine)
-            prof.step()
+
             optimization_step += 1
-            model_engine.train()
+
+            if optimization_step % config.log_every == 0:
+                current_lr = (
+                    [lr for lr in lr_scheduler.get_lr()]
+                    if lr_scheduler is not None
+                    else config.lr
+                )
+                to_log = {"train/loss": loss, "train/lr": current_lr}
+                wandb_log(to_log, step=optimization_step)
+
+                model_engine.train()
+        if optimization_step >= config.bench_steps + config.bench_warmup:
+            break
     t = time.perf_counter()
     if args.world_rank == 0:
         print(f"Benchmarking completed in {t-t0} seconds.")

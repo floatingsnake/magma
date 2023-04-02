@@ -1,0 +1,219 @@
+1679655022.474421 log opened
+1679655022.474444 cmdq_next <global>: empty
+1679655022.474449 cmdq_next </dev/pts/0>: empty
+1679655022.474454 server_client_reset_state: client /dev/pts/0 mode CURSOR,WRAP
+1679655022.474458 server_client_reset_state: cursor to 7,43
+1679655022.474463 server_client_check_pane_buffer: pane %0 is on
+1679655022.474467 @0 active pane not changed
+1679655022.474480 %0 has 23 bytes
+1679655022.474485 @0 alerts timer reset 0
+1679655022.474490 screen_write_start_pane: size 86x44, pane %0 (at 0,0)
+1679655022.474495 input_parse_buffer: %0 ground, 23 bytes: \033[?1000h\033[?1049h\033[?1h\033=
+1679655022.474501 input_csi_dispatch: 'h' "?" "1000"
+1679655022.474505 parameter 0: number 1000
+1679655022.474510 screen_write_mode_clear: MOUSE_STANDARD,MOUSE_BUTTON,MOUSE_ALL
+1679655022.474514 screen_write_mode_set: MOUSE_STANDARD
+1679655022.474518 input_csi_dispatch: 'h' "?" "1049"
+1679655022.474522 parameter 0: number 1049
+1679655022.474527 screen_write_collect_flush: flushed 0 items (screen_write_alternateon)
+1679655022.474539 input_csi_dispatch: 'h' "?" "1"
+1679655022.474542 parameter 0: number 1
+1679655022.474546 screen_write_mode_set: KCURSOR
+1679655022.474550 input_esc_dispatch: '=', 
+1679655022.474553 screen_write_mode_set: KKEYPAD
+1679655022.474557 screen_write_collect_flush: flushed 0 items (screen_write_stop)
+1679655022.474564 server_signal: Child exited
+1679655022.474608 %0 exited
+1679655022.474629 cmd_find_best_session_with_window: window is @0
+1679655022.474633 cmd_find_best_session: 1 sessions to try
+1679655022.474636 cmd_find_best_winlink_with_window: window is @0
+1679655022.474640 cmd_find_best_winlink_with_window: window is @0
+1679655022.474643 cmd_find_from_window: s=$0 0
+1679655022.474647 cmd_find_from_window: wl=0 1 w=@0 bash
+1679655022.474650 cmd_find_from_window: wp=%0
+1679655022.474653 cmd_find_from_window: idx=0
+1679655022.474656 cmd_find_from_pane: s=$0 0
+1679655022.474660 cmd_find_from_pane: wl=0 1 w=@0 bash
+1679655022.474663 cmd_find_from_pane: wp=%0
+1679655022.474666 cmd_find_from_pane: idx=0
+1679655022.474673 notify_add: buffer_mode_format=#{t/p:buffer_created}: #{buffer_sample}
+1679655022.474679 notify_add: client_mode_format=#{t/p:client_activity}: session #{session_name}
+1679655022.474684 notify_add: config_files=/autofs/nccs-svm1_home1/lfsm/.tmux.conf
+1679655022.474689 notify_add: host=batch5
+1679655022.474693 notify_add: host_short=batch5
+1679655022.474698 notify_add: next_session_id=$1
+1679655022.474702 notify_add: pane_format=0
+1679655022.474707 notify_add: pid=168228
+1679655022.474711 notify_add: session_format=0
+1679655022.474716 notify_add: socket_path=/tmp/tmux-18100/default
+1679655022.474720 notify_add: start_time=1679648708
+1679655022.474732 notify_add: tree_mode_format=#{?pane_format,#{?pane_marked,#[reverse],}#{pane_current_command}#{?pane_active,*,}#{?pane_marked,M,}#{?#{&&:#{pane_title},#{!=:#{pane_title},#{host_short}}},: "#{pane_title}",},#{?window_format,#{?window_marked_flag,#[reverse],}#{window_name}#{window_flags}#{?#{&&:#{==:#{window_panes},1},#{&&:#{pane_title},#{!=:#{pane_title},#{host_short}}}},: "#{pane_title}",},#{session_windows} windows#{?session_grouped, (group #{session_group}: #{session_group_list}),}#{?session_attached, (attached),}}}
+1679655022.474736 notify_add: uid=18100
+1679655022.475581 notify_add: user=lfsm
+1679655022.475586 notify_add: version=3.3a
+1679655022.475590 notify_add: window_format=0
+1679655022.475594 notify_add: hook=pane-exited
+1679655022.475597 notify_add: hook_pane=%0
+1679655022.475602 session_add_ref: 0 notify_add, now 2
+1679655022.475607 cmdq_append <global>: [notify_callback/0x395078f0]
+1679655022.475612 cmd_find_best_session_with_window: window is @0
+1679655022.475615 cmd_find_best_session: 1 sessions to try
+1679655022.475619 cmd_find_best_winlink_with_window: window is @0
+1679655022.475622 cmd_find_best_winlink_with_window: window is @0
+1679655022.475625 cmd_find_from_window: s=$0 0
+1679655022.475629 cmd_find_from_window: wl=0 1 w=@0 bash
+1679655022.475632 cmd_find_from_window: wp=%0
+1679655022.475635 cmd_find_from_window: idx=0
+1679655022.475641 notify_add: buffer_mode_format=#{t/p:buffer_created}: #{buffer_sample}
+1679655022.475645 notify_add: client_mode_format=#{t/p:client_activity}: session #{session_name}
+1679655022.475650 notify_add: config_files=/autofs/nccs-svm1_home1/lfsm/.tmux.conf
+1679655022.475654 notify_add: host=batch5
+1679655022.475658 notify_add: host_short=batch5
+1679655022.475662 notify_add: next_session_id=$1
+1679655022.475665 notify_add: pane_format=0
+1679655022.475670 notify_add: pid=168228
+1679655022.475673 notify_add: session_format=0
+1679655022.475677 notify_add: socket_path=/tmp/tmux-18100/default
+1679655022.475681 notify_add: start_time=1679648708
+1679655022.475691 notify_add: tree_mode_format=#{?pane_format,#{?pane_marked,#[reverse],}#{pane_current_command}#{?pane_active,*,}#{?pane_marked,M,}#{?#{&&:#{pane_title},#{!=:#{pane_title},#{host_short}}},: "#{pane_title}",},#{?window_format,#{?window_marked_flag,#[reverse],}#{window_name}#{window_flags}#{?#{&&:#{==:#{window_panes},1},#{&&:#{pane_title},#{!=:#{pane_title},#{host_short}}}},: "#{pane_title}",},#{session_windows} windows#{?session_grouped, (group #{session_group}: #{session_group_list}),}#{?session_attached, (attached),}}}
+1679655022.475696 notify_add: uid=18100
+1679655022.475717 notify_add: user=lfsm
+1679655022.475720 notify_add: version=3.3a
+1679655022.475724 notify_add: window_format=0
+1679655022.475727 notify_add: hook=window-layout-changed
+1679655022.475731 notify_add: hook_window=@0
+1679655022.475734 notify_add: hook_window_name=bash
+1679655022.475738 window_add_ref: @0 notify_add, now 2
+1679655022.475741 session_add_ref: 0 notify_add, now 3
+1679655022.475746 cmdq_append <global>: [notify_callback/0x39507a80]
+1679655022.475750 window_lost_pane: @0 pane %0
+1679655022.475877 cmd_find_best_winlink_with_window: window is @0
+1679655022.475881 cmd_find_from_session_window: s=$0 0
+1679655022.475885 cmd_find_from_session_window: wl=0 1 w=@0 bash
+1679655022.475888 cmd_find_from_session_window: wp=none
+1679655022.475891 cmd_find_from_session_window: idx=0
+1679655022.475897 notify_add: buffer_mode_format=#{t/p:buffer_created}: #{buffer_sample}
+1679655022.475901 notify_add: client_mode_format=#{t/p:client_activity}: session #{session_name}
+1679655022.475906 notify_add: config_files=/autofs/nccs-svm1_home1/lfsm/.tmux.conf
+1679655022.475910 notify_add: host=batch5
+1679655022.475914 notify_add: host_short=batch5
+1679655022.475918 notify_add: next_session_id=$1
+1679655022.475921 notify_add: pane_format=0
+1679655022.475925 notify_add: pid=168228
+1679655022.475929 notify_add: session_format=0
+1679655022.475932 notify_add: socket_path=/tmp/tmux-18100/default
+1679655022.475936 notify_add: start_time=1679648708
+1679655022.475946 notify_add: tree_mode_format=#{?pane_format,#{?pane_marked,#[reverse],}#{pane_current_command}#{?pane_active,*,}#{?pane_marked,M,}#{?#{&&:#{pane_title},#{!=:#{pane_title},#{host_short}}},: "#{pane_title}",},#{?window_format,#{?window_marked_flag,#[reverse],}#{window_name}#{window_flags}#{?#{&&:#{==:#{window_panes},1},#{&&:#{pane_title},#{!=:#{pane_title},#{host_short}}}},: "#{pane_title}",},#{session_windows} windows#{?session_grouped, (group #{session_group}: #{session_group_list}),}#{?session_attached, (attached),}}}
+1679655022.475950 notify_add: uid=18100
+1679655022.475969 notify_add: user=lfsm
+1679655022.475972 notify_add: version=3.3a
+1679655022.475976 notify_add: window_format=0
+1679655022.475979 notify_add: hook=window-unlinked
+1679655022.475983 notify_add: hook_session=$0
+1679655022.475986 notify_add: hook_session_name=0
+1679655022.475989 notify_add: hook_window=@0
+1679655022.475992 notify_add: hook_window_name=bash
+1679655022.475996 session_add_ref: 0 notify_add, now 4
+1679655022.475999 window_add_ref: @0 notify_add, now 3
+1679655022.476003 session_add_ref: 0 notify_add, now 5
+1679655022.476007 cmdq_append <global>: [notify_callback/0x394684a0]
+1679655022.476011 window_remove_ref: @0 winlink_remove, now 2
+1679655022.476015 session 0 destroyed (session_detach)
+1679655022.476020 cmd_find_best_session: 0 sessions to try
+1679655022.476025 notify_add: buffer_mode_format=#{t/p:buffer_created}: #{buffer_sample}
+1679655022.476029 notify_add: client_mode_format=#{t/p:client_activity}: session #{session_name}
+1679655022.476034 notify_add: config_files=/autofs/nccs-svm1_home1/lfsm/.tmux.conf
+1679655022.476038 notify_add: host=batch5
+1679655022.476041 notify_add: host_short=batch5
+1679655022.476045 notify_add: next_session_id=$1
+1679655022.476048 notify_add: pane_format=0
+1679655022.476052 notify_add: pid=168228
+1679655022.476056 notify_add: session_format=0
+1679655022.476059 notify_add: socket_path=/tmp/tmux-18100/default
+1679655022.476063 notify_add: start_time=1679648708
+1679655022.476073 notify_add: tree_mode_format=#{?pane_format,#{?pane_marked,#[reverse],}#{pane_current_command}#{?pane_active,*,}#{?pane_marked,M,}#{?#{&&:#{pane_title},#{!=:#{pane_title},#{host_short}}},: "#{pane_title}",},#{?window_format,#{?window_marked_flag,#[reverse],}#{window_name}#{window_flags}#{?#{&&:#{==:#{window_panes},1},#{&&:#{pane_title},#{!=:#{pane_title},#{host_short}}}},: "#{pane_title}",},#{session_windows} windows#{?session_grouped, (group #{session_group}: #{session_group_list}),}#{?session_attached, (attached),}}}
+1679655022.476077 notify_add: uid=18100
+1679655022.476095 notify_add: user=lfsm
+1679655022.476098 notify_add: version=3.3a
+1679655022.476102 notify_add: window_format=0
+1679655022.476105 notify_add: hook=session-closed
+1679655022.476109 notify_add: hook_session=$0
+1679655022.476112 notify_add: hook_session_name=0
+1679655022.476115 session_add_ref: 0 notify_add, now 6
+1679655022.476120 cmdq_append <global>: [notify_callback/0x39498240]
+1679655022.476124 session_remove_ref: 0 session_destroy, now 5
+1679655022.476139 cmdq_next <global>: enter
+1679655022.476143 cmdq_next <global>: [notify_callback/0x395078f0] (1), flags 0
+1679655022.476147 notify_callback: pane-exited
+1679655022.476152 notify_insert_hook: inserting hook pane-exited
+1679655022.476155 cmd_find_best_session: 0 sessions to try
+1679655022.476159 notify_insert_hook: hook pane-exited not found
+1679655022.476163 session_remove_ref: 0 notify_callback, now 4
+1679655022.476169 cmdq_next <global>: [notify_callback/0x39507a80] (1), flags 0
+1679655022.476172 notify_callback: window-layout-changed
+1679655022.476176 notify_insert_hook: inserting hook window-layout-changed
+1679655022.476180 cmd_find_best_session: 0 sessions to try
+1679655022.476184 notify_insert_hook: hook window-layout-changed not found
+1679655022.476188 window_remove_ref: @0 notify_callback, now 1
+1679655022.476191 session_remove_ref: 0 notify_callback, now 3
+1679655022.476196 cmdq_next <global>: [notify_callback/0x394684a0] (1), flags 0
+1679655022.476199 notify_callback: window-unlinked
+1679655022.476202 notify_insert_hook: inserting hook window-unlinked
+1679655022.476206 cmd_find_best_session: 0 sessions to try
+1679655022.476212 session_remove_ref: 0 notify_callback, now 2
+1679655022.476216 window_remove_ref: @0 notify_callback, now 0
+1679655022.476219 window @0 destroyed (0 references)
+1679655022.476223 session_remove_ref: 0 notify_callback, now 1
+1679655022.476228 cmdq_next <global>: [notify_callback/0x39498240] (1), flags 0
+1679655022.476231 notify_callback: session-closed
+1679655022.476235 notify_insert_hook: inserting hook session-closed
+1679655022.476238 cmd_find_best_session: 0 sessions to try
+1679655022.476243 session_remove_ref: 0 notify_callback, now 0
+1679655022.476247 cmdq_next <global>: exit (empty)
+1679655022.476251 cmdq_next </dev/pts/0>: empty
+1679655022.476254 cmdq_next <global>: empty
+1679655022.476258 cmdq_next </dev/pts/0>: empty
+1679655022.476262 sending message 203 to peer 0x3947eaa0 (4 bytes)
+1679655022.476271 session 0 freed (0 references)
+1679655022.476284 cmdq_next <global>: empty
+1679655022.476289 cmdq_next </dev/pts/0>: empty
+1679655022.476363 peer 0x3947eaa0 message 205
+1679655022.476393 removing term screen-256color
+1679655022.476419 sending message 204 to peer 0x3947eaa0 (0 bytes)
+1679655022.476424 cmdq_next <global>: empty
+1679655022.476427 cmdq_next </dev/pts/0>: empty
+1679655022.476437 cmdq_next <global>: empty
+1679655022.476442 cmdq_next </dev/pts/0>: empty
+1679655022.476641 lost client 0x3947dfc0
+1679655022.476645 lost attached client 0x3947dfc0
+1679655022.476651 cmd_find_best_session: 0 sessions to try
+1679655022.476657 notify_add: buffer_mode_format=#{t/p:buffer_created}: #{buffer_sample}
+1679655022.476661 notify_add: client_mode_format=#{t/p:client_activity}: session #{session_name}
+1679655022.476666 notify_add: config_files=/autofs/nccs-svm1_home1/lfsm/.tmux.conf
+1679655022.476670 notify_add: host=batch5
+1679655022.476674 notify_add: host_short=batch5
+1679655022.476677 notify_add: next_session_id=$1
+1679655022.476681 notify_add: pane_format=0
+1679655022.476685 notify_add: pid=168228
+1679655022.476688 notify_add: session_format=0
+1679655022.476692 notify_add: socket_path=/tmp/tmux-18100/default
+1679655022.476696 notify_add: start_time=1679648708
+1679655022.476706 notify_add: tree_mode_format=#{?pane_format,#{?pane_marked,#[reverse],}#{pane_current_command}#{?pane_active,*,}#{?pane_marked,M,}#{?#{&&:#{pane_title},#{!=:#{pane_title},#{host_short}}},: "#{pane_title}",},#{?window_format,#{?window_marked_flag,#[reverse],}#{window_name}#{window_flags}#{?#{&&:#{==:#{window_panes},1},#{&&:#{pane_title},#{!=:#{pane_title},#{host_short}}}},: "#{pane_title}",},#{session_windows} windows#{?session_grouped, (group #{session_group}: #{session_group_list}),}#{?session_attached, (attached),}}}
+1679655022.476710 notify_add: uid=18100
+1679655022.476730 notify_add: user=lfsm
+1679655022.476733 notify_add: version=3.3a
+1679655022.476737 notify_add: window_format=0
+1679655022.476740 notify_add: hook=client-detached
+1679655022.476744 notify_add: hook_client=/dev/pts/0
+1679655022.476748 cmdq_append <global>: [notify_callback/0x39498240]
+1679655022.476778 remove peer 0x3947eaa0
+1679655022.476794 unref client 0x3947dfc0 (2 references)
+1679655022.476799 cmdq_next <global>: enter
+1679655022.476802 cmdq_next <global>: [notify_callback/0x39498240] (1), flags 0
+1679655022.476806 notify_callback: client-detached
+1679655022.476809 notify_insert_hook: inserting hook client-detached
+1679655022.476813 cmd_find_best_session: 0 sessions to try
+1679655022.476822 unref client 0x3947dfc0 (1 references)
+1679655022.476826 cmdq_next <global>: exit (empty)
+1679655022.476830 cmdq_next <global>: empty
+1679655022.476833 server loop exit

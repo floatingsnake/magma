@@ -19,11 +19,13 @@ conda activate gpt-neox-3.9
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/scratch/miniconda3/envs/gpt-neox-3.9/lib
 export LOG_PATH=/gpfs/alpine/scratch/lfsm/csc499/profiled_logs
 
-module load ninja
+
 NNODE=2
-export OMP_NUM_THREADS=1
+
+#export OMP_NUM_THREADS=1
 export WORLD_SIZE=$(($NNODE*6))
-jsrun -n $NNODE -a 6 -c 6 -g 6 \
+module load ninja
+jsrun -n 12 -a 1 -c 2 -g 1 \
 python -u profile.py --deepspeed \
-  --config /ccs/home/lfsm/code/magma/configs/profile_mbs1.yml
+  --config /ccs/home/lfsm/code/magma/configs/profile_mbs2.yml
 

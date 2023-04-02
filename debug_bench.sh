@@ -20,8 +20,8 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/scratch/miniconda3/envs/gpt-neox-3.9/l
 
 NNODE=2
 export OMP_NUM_THREADS=1
-export WORLD_SIZE=$(($NNODE*6))
-jsrun -n $NNODE -a 6 -c 6 -g 6 \
+#export WORLD_SIZE=$(($NNODE*6))
+jsrun -n 12 -a 1 -c 1 -g 1 \
 python -u benchmark.py --deepspeed \
-  --config /ccs/home/lfsm/code/magma/configs/benchmark_mbs4.yml
+  --config /ccs/home/lfsm/code/magma/configs/benchmark_mbs2.yml
 

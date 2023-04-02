@@ -1,73 +1,58 @@
 import sys
 sys.path.append('..')
-import argparse
-import torch
 import os
+from magma import Magma
 import deepspeed
-from magma.magma import Magma
-from magma.webdataset import get_wds_dataset
-from magma.utils import configure_param_groups
+import torch
+from magma.utils import parse_args, configure_param_groups
 
-def world_info_from_env():
-    local_rank = 0
-    for v in ('SLURM_LOCALID', 'MPI_LOCALRANKID', 'OMPI_COMM_WORLD_LOCAL_RANK', 'LOCAL_RANK'):
-        if v in os.environ:
-            local_rank = int(os.environ[v])
-            break
-    global_rank = 0
-    for v in ('SLURM_PROCID', 'PMI_RANK', 'OMPI_COMM_WORLD_RANK', 'RANK'):
-        if v in os.environ:
-            global_rank = int(os.environ[v])
-            break
-    world_size = 1
-    for v in ('SLURM_NTASKS', 'PMI_SIZE', 'OMPI_COMM_WORLD_SIZE', 'WORLD_SIZE'):
-        if v in os.environ:
-            world_size = int(os.environ[v])
-            break
-    return local_rank, global_rank, world_size
+args = parse_args()
+deepspeed.init_distributed()
 
-def parse_args():
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--config", type=str, required=False, help="path to your training config",
-	default='/ccs/home/lfsm/code/magma/configs/benchmark_20b_mbs1.yml')
-    args = parser.parse_args()
-    return args
+args.local_rank =int(os.environ['LOCAL_RANK'])
+args.world_size =int(os.environ['WORLD_SIZE'])
 
-if __name__ == "__main__":
-    args=parse_args() 
-    #deepspeed.init_distributed()
-    #args.local_rank, args.world_rank, args.world_size = world_info_from_env()
-    model = Magma(
-	args.config,
-	#device=torch.device("cuda",args.local_rank)
-    )  # for finetuning one might want to load the model via Magma.from_checkpoint(...) here
-    tokenizer, config, transforms = model.tokenizer, model.config, model.transforms
-    
-    import pdb;pdb.set_trace()
+device = torch.device("cuda", int(args.local_rank))
+model = Magma(args.config,
+              device)
 
-    # filter frozen from trainable parameters:
-    trainable_parameters = configure_param_groups(model, config)
-    opt = torch.optim.AdamW(
-        trainable_parameters,
-        config.lr,
-        betas=(0.9, 0.95),
-        weight_decay=config.weight_decay,
-    )
+config = model.config
 
-    model_engine, _, _, lr_scheduler = deepspeed.initialize(
-        args=args,
-        model=model,
-        #optimizer=opt,
-        model_parameters=trainable_parameters,
-        config_params=config.deepspeed_config_params,
-    )
-    mbs = 1
-    images, captions = torch.Tensor(mbs,3,224,224).half().cuda(), torch.Tensor(mbs,2048).half().cuda()
-    outputs = model_engine(images, captions)
-    loss = outputs.loss
-    losses.append(loss)
-    model_engine.backward(loss)
-    model_engine.step()
+trainable_parameters = configure_param_groups(model,config)
+opt = torch.optim.AdamW(
+    trainable_parameters,
+    config.lr,
+    betas=(0.9, 0.95),
+    weight_decay=config.weight_decay,
+)
+
+deepspeed.init_distributed()
+
+model_engine, opt, train_loader, lr_scheduler = deepspeed.initialize(
+    model=model,
+    optimizer=opt,
+    config_params=config.deepspeed_config_params,
+)
+print('init_done')
+
+print("GPU used memory is {:.2f} GB".format(torch.cuda.max_memory_allocated(device)/1073741824))
+mbs=1
+images = torch.Tensor(mbs,3,256,256).half().cuda()
+captions = torch.zeros(mbs,2048).long().cuda()
+outputs = model_engine(images, captions)
+print("GPU used memory is {:.2f} GB".format(torch.cuda.max_memory_allocated(device)/1073741824))
+loss = outputs.loss
+model_engine.backward(loss)
+print("GPU used memory is {:.2f} GB".format(torch.cuda.max_memory_allocated(device)/1073741824))
 
 
+
+# bs 2 4.02GB 7.09GB 8.02GB
+# bs 8 4.02GB 16.29 GB 17.19 GB
+
+# neox
+# bs 8 
+#   model 2.71 GB 
+#   ds init 9.20 GB
+#   forward 27.69 GB
+#   backward 30.14 GB

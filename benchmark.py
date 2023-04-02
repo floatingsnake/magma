@@ -22,44 +22,24 @@ from magma.webdataset import get_wds_dataset
 from magma.train_loop import (
     train_step,
 )
+from magma.distributed import init_distributed_device
 
 # tell tokenizers not to do parallelism
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
-def world_info_from_env():
-    local_rank = 0
-    for v in ('SLURM_LOCALID', 'MPI_LOCALRANKID', 'OMPI_COMM_WORLD_LOCAL_RANK', 'LOCAL_RANK'):
-        if v in os.environ:
-            local_rank = int(os.environ[v])
-            break
-    global_rank = 0
-    for v in ('SLURM_PROCID', 'PMI_RANK', 'OMPI_COMM_WORLD_RANK', 'RANK'):
-        if v in os.environ:
-            global_rank = int(os.environ[v])
-            break
-    world_size = 1
-    for v in ('SLURM_NTASKS', 'PMI_SIZE', 'OMPI_COMM_WORLD_SIZE', 'WORLD_SIZE'):
-        if v in os.environ:
-            world_size = int(os.environ[v])
-            break
-    return local_rank, global_rank, world_size
 
 if __name__ == "__main__":
     
     # parse command line arguments:
     args = parse_args()
-    
-    # distrubited init
-    deepspeed.init_distributed()
-    args.local_rank, args.world_rank, args.world_size = world_info_from_env()
-  	
-    device=torch.device("cuda",args.local_rank)
+    device=init_distributed_device(args)
+    os.environ["LOCAL_RANK"]=str(args.local_rank)
+    os.environ["OMPI_COMM_WORLD_LOCAL_RANK"]=str(args.local_rank)
     model = Magma(
         args.config,
         device=device
     )  # for finetuning one might want to load the model via Magma.from_checkpoint(...) here
     #device=torch.device("cuda", args.local_rank)
-    print("GPU used memory is {:.2f} GB".format(torch.cuda.max_memory_allocated(device)/1073741824))
     tokenizer, config, transforms = model.tokenizer, model.config, model.transforms
 
     # filter frozen from trainable parameters:
@@ -89,7 +69,7 @@ if __name__ == "__main__":
     #print_main(f"Loaded eval dataset with {len(eval_dataset)} samples")
 
     opt = AdamW(
-        trainable_parameters,
+       trainable_parameters,
         config.lr,
         betas=(0.9, 0.95),
         weight_decay=config.weight_decay,
@@ -145,7 +125,7 @@ if __name__ == "__main__":
         if optimization_step >= config.bench_steps + config.bench_warmup:
             break
     t = time.perf_counter()
-    if args.world_rank == 0:
+    if args.rank == 0:
         print(f"Benchmarking completed in {t-t0} seconds.")
         print("Average Sample Throughput: " + 
             f"{config.micro_batch_size *config.world_size  * config.bench_steps / (t-t0)} Samples/Second")

@@ -10,7 +10,7 @@
 
     # train settings
     micro_batch_size: 1,
-    gradient_accumulation_steps: 1,
+    gradient_accumulation_steps: 2,
     workers: 1,
     bench_warmup: 10,
     bench_steps: 100,
