@@ -56,7 +56,11 @@ class Magma(nn.Module):
             self.transformer = self.lm.gpt_neox.layers
         else:
             raise NotImplementedError(f"LM `{self.lm_name}` not recognized")
+<<<<<<< HEAD
         self.word_embedding = self.word_embedding#.to(device)
+=======
+        #self.word_embedding = self.word_embedding.to(device)
+>>>>>>> c69462722b591d01f43a104c436d701f84022fc0
 
         # adapter settings
         self.mlp_adapter_added, self.attn_adapter_added = False, False
@@ -105,8 +109,8 @@ class Magma(nn.Module):
         if config.freeze_img_encoder:
             for param in self.image_prefix.enc.parameters():
                 param.requires_grad = False
-
-        # self.lm.to(self.device)
+                
+        #self.lm.to(self.device)
 
     def add_adapters(
         self,

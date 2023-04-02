@@ -72,7 +72,11 @@ def get_neox(
     if gradient_checkpointing:
         config.use_cache = False
     config.model_device = "cpu"
+<<<<<<< HEAD
     model = GPTNeoXForCausalLM.from_pretrained(config._name_or_path, cache_dir='/gpfs/alpine/scratch/lfsm/csc499/neox_weights')
     #model = GPTNeoXForCausalLM.from_pretrained(config._name_or_path, config=config, cache_dir='/gpfs/alpine/scratch/lfsm/csc499/neox_weights')
+=======
+    model = GPTNeoXForCausalLM.from_pretrained(config._name_or_path, config=config)
+>>>>>>> c69462722b591d01f43a104c436d701f84022fc0
     return model
 

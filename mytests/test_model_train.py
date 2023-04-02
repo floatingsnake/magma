@@ -46,6 +46,22 @@ model_engine.backward(loss)
 print("GPU used memory is {:.2f} GB".format(torch.cuda.max_memory_allocated(device)/1073741824))
 
 
+<<<<<<< HEAD:mytests/test_model.py
+=======
+    model_engine, _, _, lr_scheduler = deepspeed.initialize(
+        args=args,
+        model=model,
+        #optimizer=opt,
+        model_parameters=trainable_parameters,
+        config_params=config.deepspeed_config_params,
+    )
+    mbs = 1
+    images, captions = torch.Tensor(mbs,3,224,224).half().cuda(), torch.Tensor(mbs,2048).half().cuda()
+    outputs = model_engine(images, captions)
+    loss = outputs.loss
+    model_engine.backward(loss)
+    model_engine.step()
+>>>>>>> c69462722b591d01f43a104c436d701f84022fc0:mytests/test_model_train.py
 
 # bs 2 4.02GB 7.09GB 8.02GB
 # bs 8 4.02GB 16.29 GB 17.19 GB
