@@ -1,10 +1,10 @@
 #!/bin/bash
 #BSUB -P CSC499
 #BSUB -W 1:00
-#BSUB -nnodes 8
+#BSUB -nnodes 2
 #BSUB -J MMp
 #BSUB -e MMp.out.%J
-#BSUB -o n8.out
+#BSUB -o n2_acg3.out
 
 # compute node don't have write permisson and ability to connect internet
 export WANDB_DIR=/gpfs/alpine/scratch/lfsm/csc499/wandb
@@ -24,9 +24,9 @@ conda activate gpt-neox-3.9
 # while don't use incompatiable openssl in /minoconda3/lib/ 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/scratch/miniconda3/envs/gpt-neox-3.9/lib
 
-NNODE=8
+NNODE=2
 export OMP_NUM_THREADS=1
 export WORLD_SIZE=$(($NNODE*6))
-jsrun -n $NNODE -a 6 -c 6 -g 6 \
+jsrun -n 12 -a 1 -c 1 -g 1 \
 python -u benchmark.py --deepspeed \
-  --config /ccs/home/lfsm/code/magma/configs/benchmark_20b_mbs1.yml
+  --config /ccs/home/lfsm/code/magma/configs/benchmark_mbs2.yml

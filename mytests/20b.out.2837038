@@ -1,0 +1,20 @@
+
+Lmod is automatically replacing "xl/16.1.1-10" with "gcc/10.2.0".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) spectrum-mpi/10.4.0.3-20210112
+
+
+Currently Loaded Modules:
+  1) lsf-tools/2.0                7) nsight-systems/2021.3.1.54
+  2) hsi/5.0.2.p5                 8) cuda/11.0.3
+  3) darshan-runtime/3.4.0-lite   9) gcc/10.2.0
+  4) xalt/1.2.1                  10) git/2.36.1
+  5) DefApps                     11) ninja/1.10.2
+  6) nsight-compute/2021.2.1     12) spectrum-mpi/10.4.0.3-20210112
+
+ 
+
+Resources unavailable:  GPU: avail 96 requested 192 [ slots 32 x gpus_per_rs 6 ]
+Error: Requested job constraints can never be met. Job was not scheduled. Check your request and try again.

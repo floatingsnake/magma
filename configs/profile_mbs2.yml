@@ -9,9 +9,9 @@
     lm_path: "EleutherAI/pythia-70m-deduped",
 
     # train settings
-    micro_batch_size: 1,
-    gradient_accumulation_steps: 2,
-    workers: 1,
+    micro_batch_size: 2,
+    gradient_accumulation_steps: 1,
+    workers: 4,
     bench_warmup: 10,
     bench_steps: 100,
     lr: 8.0e-4,

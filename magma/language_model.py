@@ -49,7 +49,7 @@ def get_gptj(
     return model
 
 def neox_config(path: Optional[str] = None):
-    config = AutoConfig.from_pretrained(path if path is not None else "EleutherAI/pythia-19m")
+    config = AutoConfig.from_pretrained(path if path is not None else "EleutherAI/pythia-70m-deduped",cache_dir='/gpfs/alpine/scratch/lfsm/csc499/neox_weights')
     config.rotary = True
     config.rotary_dim = 64
     config.jax = True
@@ -72,6 +72,11 @@ def get_neox(
     if gradient_checkpointing:
         config.use_cache = False
     config.model_device = "cpu"
+<<<<<<< HEAD
+    model = GPTNeoXForCausalLM.from_pretrained(config._name_or_path, cache_dir='/gpfs/alpine/scratch/lfsm/csc499/neox_weights')
+    #model = GPTNeoXForCausalLM.from_pretrained(config._name_or_path, config=config, cache_dir='/gpfs/alpine/scratch/lfsm/csc499/neox_weights')
+=======
     model = GPTNeoXForCausalLM.from_pretrained(config._name_or_path, config=config)
+>>>>>>> c69462722b591d01f43a104c436d701f84022fc0
     return model
 

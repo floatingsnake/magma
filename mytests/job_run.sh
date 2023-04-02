@@ -1,16 +1,13 @@
 #!/bin/bash
-
 #BSUB -P CSC499
 #BSUB -W 1:00
-#BSUB -nnodes 2
-#BSUB -J pf
-#BSUB -e pf.out.%J
-#BSUB -o n2_pf.out
+#BSUB -nnodes 32 
+#BSUB -J 20b
+#BSUB -e 20b.out.%J
+#BSUB -o n32.out
 
 # compute node don't have write permisson and ability to connect internet
-export WANDB_DIR=/gpfs/alpine/scratch/lfsm/csc499/wandb
 export TORCH_EXTENSIONS_DIR=/gpfs/alpine/scratch/lfsm/csc499/mycache/torch_extensions/
-export WANDB_MODE=dryrun
 
 # set up module and other env variable
 # this env and shell are built following 
@@ -24,13 +21,9 @@ conda activate gpt-neox-3.9
 # this is to ensure system can use new libstdc++.so.6 
 # while don't use incompatiable openssl in /minoconda3/lib/ 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/scratch/miniconda3/envs/gpt-neox-3.9/lib
-export LOG_PATH=/gpfs/alpine/scratch/lfsm/csc499/profiled_logs
 
-
-NNODE=2
-export OMP_NUM_THREADS=1
-export WORLD_SIZE=$(($NNODE*6))
-jsrun -n $NNODE -a 6 -c 6 -g 6 \
-python -u profile.py --deepspeed \
-  --config /ccs/home/lfsm/code/magma/configs/profile_mbs1.yml
-
+jsrun -n 32 -a 6 -c 6 -g 6 \
+python test_model.py --deepspeed --config ../configs/benchmark_20b_mbs1.yml
+#deepspeed --launcher jsrun --hostfile myhostfile \
+#	train_ds.py \
+#	--config configs/profile_bs16.yml > n2_oom.txt
