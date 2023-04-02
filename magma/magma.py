@@ -106,8 +106,6 @@ class Magma(nn.Module):
             for param in self.image_prefix.enc.parameters():
                 param.requires_grad = False
                 
-        #self.lm.to(self.device)
-
     def add_adapters(
         self,
         downsample_factor: int = 4,
