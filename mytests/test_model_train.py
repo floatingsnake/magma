@@ -13,7 +13,7 @@ args.world_size =int(os.environ['WORLD_SIZE'])
 
 if __name__ == "__main__":
     args=parse_args() 
-    #deepspeed.init_distributed()
+    deepspeed.init_distributed()
     #args.local_rank, args.world_rank, args.world_size = world_info_from_env()
     model = Magma(
 	args.config,
