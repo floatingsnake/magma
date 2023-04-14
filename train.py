@@ -32,17 +32,6 @@ from magma.train_loop import (
 )
 
 
-def _load_img_cpt_datasets(dataset_dir, tokenizer, transforms):
-    if isinstance(dataset_dir, (list, tuple)):
-        return ConcatDataset(
-            [_load_img_cpt_datasets(d, tokenizer, transforms) for d in dataset_dir]
-        )
-    elif isinstance(dataset_dir, str):
-        return ImgCptDataset(dataset_dir, tokenizer=tokenizer, transforms=transforms)
-    else:
-        raise TypeError("dataset dir wrong type")
-
-
 def get_pretraining_dataloader(config, tokenizer, transforms):
     
     def preprocess_text(text):
@@ -52,11 +41,16 @@ def get_pretraining_dataloader(config, tokenizer, transforms):
                     max_length=2048,
                     padding="max_length",
                     truncation=True,)
-
+    config.world_size=int(os.environ['WORLD_SIZE'])
     data = get_wds_dataset(config, transforms, preprocess_text, is_train=True)
     data.set_epoch(0) # [TODO]go change this when training more than 1 epoch
     train_loader=data.dataloader
     
+    if False: # no need val_loader for now
+        data = get_wds_dataset(config, transforms, preprocess_text, is_train=True)
+        data.set_epoch(0)
+        val_loader = data.dataloader
+
     return train_loader
 
 # tell tokenizers not to do parallelism
@@ -70,17 +64,11 @@ if __name__ == "__main__":
     # load model + tokenizer:
     print('model creating')
     
-    args.local_rank =int(os.environ['LOCAL_RANK'])
-    args.world_size =int(os.environ['WORLD_SIZE'])
-    args.world_rank =int(os.environ['WORLD_RANK'])
-    
     model = Magma(
         args.config,
         device=torch.device("cuda", args.local_rank)
     )  # for finetuning one might want to load the model via Magma.from_checkpoint(...) here
     device=torch.device("cuda",args.local_rank)
-    #device=torch.device("cuda", args.local_rank)
-    print("GPU used memory is {:.2f} GB".format(torch.cuda.max_memory_allocated(device)/1073741824))
     tokenizer, config, transforms = model.tokenizer, model.config, model.transforms
 
     # filter frozen from trainable parameters:
@@ -91,15 +79,12 @@ if __name__ == "__main__":
        config, tokenizer, transforms
     )
 
-
     opt = AdamW(
         trainable_parameters,
         config.lr,
         betas=(0.9, 0.95),
         weight_decay=config.weight_decay,
     )
-    print('after init opt, data, model')
-    print("GPU used memory is {:.2f} GB".format(torch.cuda.max_memory_allocated(device)/1073741824))
 
     model_engine, opt, _, lr_scheduler = deepspeed.initialize(
         args=args,
@@ -109,10 +94,7 @@ if __name__ == "__main__":
         collate_fn=partial(collate_fn, seq_len=model.seq_len),
         config_params=config.deepspeed_config_params,
     )
-    print("deepspeed init done")
-    print("GPU used memory is {:.2f} GB".format(torch.cuda.max_memory_allocated(device)/1073741824))
 
-    #eval_loader = cycle(model_engine.deepspeed_io(eval_dataset))
     train_loader = cycle(train_loader)
 
     # initialize training
@@ -140,7 +122,7 @@ if __name__ == "__main__":
         project=config.wandb_project,
         name=config.name or wandb.util.generate_id(),
         config=config,
-        dir=os.environ['WANDB_DIR']
+        #dir=os.environ['WANDB_DIR']
     )
 
     # training loop

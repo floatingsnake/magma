@@ -8,7 +8,7 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--config", type=str, required=False, help="path to your training config",
-	default='/ccs/home/lfsm/code/magma/configs/benchmark_mbs1.yml')
+	default='/ccs/home/lfsm/code/magma/configs/summit_clipH_pythia70m_web.yml')
     parser.add_argument(
         "--train-data",
         type=str,
@@ -31,7 +31,7 @@ def parse_args():
         "--seed", type=int, default=0, help="Default random seed."
     )
     parser.add_argument(
-        "--batch-size", type=int, default=64, help="Batch size per GPU."
+        "--micro-batch-size", type=int, default=64, help="Batch size per GPU."
     )
     parser.add_argument(
         "--workers", type=int, default=1, help="Number of dataloader workers per GPU."
@@ -59,7 +59,6 @@ dataloader = data.dataloader
 i=0
 for batch in dataloader:
     i += 1
-    import pdb;pdb.set_trace()
     print(batch[0].shape)
     if i == 1000:
         print("sample 1000 times done")

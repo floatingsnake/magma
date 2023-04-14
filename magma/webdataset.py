@@ -199,7 +199,7 @@ class detshuffle2(wds.PipelineStage):
         rng.seed(seed)
         return _shuffle(src, self.bufsize, self.initial, rng)
 
-def get_wds_dataset(args, preprocess_img, preprocess_txt, is_train, epoch=0, floor=False):
+def get_wds_dataset(args, preprocess_img, preprocess_text, is_train, epoch=0, floor=False):
     input_shards = args.train_data if is_train else args.val_data
     assert input_shards is not None
     resampled = getattr(args, 'dataset_resampled', False) and is_train
@@ -252,7 +252,7 @@ def get_wds_dataset(args, preprocess_img, preprocess_txt, is_train, epoch=0, flo
         wds.select(filter_no_caption_or_no_image),
         wds.decode("pilrgb", handler=log_and_continue),
         wds.rename(image="jpg;png", text="txt"),
-        wds.map_dict(image=preprocess_img, text=preprocess_txt),
+        wds.map_dict(image=preprocess_img, text=preprocess_text),
         wds.to_tuple("image", "text"),
         wds.batched(args.micro_batch_size, partial=not is_train),
     ])

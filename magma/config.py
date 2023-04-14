@@ -26,6 +26,7 @@ class MultimodalConfig:
 
     micro_batch_size: int
     optimizer_name: str = "AdamW"
+    train_steps: int = 150000,
     lr: float = 8.0e-4
     image_enc_lr: float = None
     min_lr: float = 0.0
@@ -55,6 +56,8 @@ class MultimodalConfig:
     # Data:
     # ------------------------------------------------------------
     train_data: str = "/gpfs/alpine/csc499/proj-shared/LAION-400m-webdataset/data/{00000..41455}.tar"
+    val_data: str = "/gpfs/alpine/csc499/proj-shared/LAION-400m-webdataset/data/{00000..41455}.tar"
+    
     train_num_samples: int = 407332084
     dataset_resampled: bool = False
     seed: int = 0
