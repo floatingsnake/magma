@@ -109,8 +109,8 @@ class ImagePrefix(nn.Module):
         if self.use_layernorm:
             logits = self.ln(logits)
 
-        # Added for shape mismatch. No longer needed?
-        #if logits.ndim == 2:
-        #    logits = logits.unsqueeze(1)
+        # Added for shape mismatch.
+        if logits.ndim == 2:
+            logits = logits.unsqueeze(1)
 
         return logits
