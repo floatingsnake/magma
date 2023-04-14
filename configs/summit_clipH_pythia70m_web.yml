@@ -1,0 +1,40 @@
+{
+    # image encoder settings
+    encoder_name: 'openclip-H',
+    adapter_config: {"mlp": {"adapter_type": "normal", "downsample_factor": 8}, "attention": {"adapter_type": "normal", "downsample_factor": 8}},
+    freeze_img_encoder: false,
+
+    # language model settings
+    lm_name: "neox",
+    lm_path: "EleutherAI/pythia-70m-deduped",
+
+    # train settings
+    micro_batch_size: 1,
+    gradient_accumulation_steps: 1,
+    lr: 8.0e-4,
+    min_lr: 0.0,
+    lr_decay_iters: 300000,
+    image_enc_lr: 2.0e-6,
+    use_image_embed_layernorm: true,
+    image_embed_dropout_prob: 0.1,
+    image_size: 384,
+
+    zero_stage: 2,
+    gradient_clipping: 1.0,
+
+    # dataset / save / load settings
+    # dataset_type: 'new',
+    train_data: "/gpfs/alpine/csc499/proj-shared/LAION-400m-webdataset/data/{00000..41455}.tar",
+    val_data: "/gpfs/alpine/csc499/proj-shared/LAION-400m-webdataset/data/{00000..41455}.tar",
+    # split train/val data here. eg: train_data:{00000..40000}.tar val_data:{40001..41455}.tar 
+    train_num_samples: 407332084,
+    dataset_resampled: False,
+    workers: 4 # number of worker for dataloader
+
+    save: "/gpfs/alpine/scratch/lfsm/csc499/checkpoints/MAGMA_70M_clipH",
+    load: "/gpfs/alpine/scratch/lfsm/csc499/checkpoints/MAGMA_70M_clipH",
+
+    eval_every: 250,
+    wandb_project: "MAGMA_70M_clipH",
+    name: "MAGMA_70M_clipH"
+}
