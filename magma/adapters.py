@@ -108,9 +108,10 @@ class AdapterWrapper(Adapter):
 
     def forward(self, x: TensorType["b", "s", "d"], *attn_args, **attn_kwargs):
         attn_outputs = self.attn_block(x, *attn_args, **attn_kwargs)
+        
         attn_output, outputs = (
             attn_outputs[0],
             attn_outputs[1:],
-        )  # output_attn: a, present, (attentions)
+        )  # outputs: output, bias
         hidden_states = self.adapter(attn_output) + attn_output
         return (hidden_states,) + outputs

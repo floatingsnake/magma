@@ -39,17 +39,18 @@ def add_adapters(
         names = [name for name,module in module.named_modules()]
         if location in names and location==ff_attr:
             mlp = getattr(module,ff_attr)
-            adapter = Adapter(
+            adapter_layer = AdapterWrapper(
+                        attn_block=mlp,
                         dim=neox_args.hidden_size,
                         downsample_factor=downsample_factor,
                         **adapter_kwargs
                         )
-            adapter_layer = nn.Sequential(
-                *[
-                    mlp,
-                    adapter,
-                ]
-            )
+            # adapter_layer = nn.Sequential(
+            #     *[
+            #         mlp,
+            #         adapter,
+            #     ]
+            # )
             setattr(module,ff_attr,adapter_layer)   
         elif location in names and location==attn_attr:
             attn = getattr(module,attn_attr)
