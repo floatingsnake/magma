@@ -55,7 +55,7 @@ from megatron.utils import (
     CharCounter,
 )
 from megatron.model.gpt2_model import cross_entropy
-from eval_tasks import run_eval_harness
+# from eval_tasks import run_eval_harness
 
 
 def mup_weights_reinit(neox_args, model):
@@ -922,12 +922,12 @@ def evaluate(
             eval_results["lm_loss"] * tokens_per_char
         )
 
-    if neox_args.eval_tasks:
-        eval_results.update(
-            run_eval_harness(
-                model, forward_step_fn, neox_args, eval_tasks=neox_args.eval_tasks
-            ).get("results")
-        )
+    # if neox_args.eval_tasks:
+    #     eval_results.update(
+    #         run_eval_harness(
+    #             model, forward_step_fn, neox_args, eval_tasks=neox_args.eval_tasks
+    # #         ).get("results")
+    #     )
     # Move model back to the train mode.
     model.train()
     return eval_results
