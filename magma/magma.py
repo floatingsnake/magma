@@ -57,7 +57,6 @@ class Magma(nn.Module):
             self.transformer = self.lm.gpt_neox.layers
         else:
             raise NotImplementedError(f"LM `{self.lm_name}` not recognized")
-        self.word_embedding = self.word_embedding.to(device)
 
         # adapter settings
         self.mlp_adapter_added, self.attn_adapter_added = False, False
