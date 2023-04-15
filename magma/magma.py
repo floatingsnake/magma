@@ -65,7 +65,7 @@ class Magma(nn.Module):
         self.image_prefix = ImagePrefix(
             config=config,
             out_dim=self.lm.config.hidden_size,
-        ).to(self.device)
+        )
 
         # might change based on the type of image encoder, so get from prefix instead of config
         self.image_prefix_seq_len = self.image_prefix.out_seq_len
@@ -106,9 +106,6 @@ class Magma(nn.Module):
         if config.freeze_img_encoder:
             for param in self.image_prefix.enc.parameters():
                 param.requires_grad = False
-
-        # added for CPU tests. No longer needed and leads to OOM on GPUs.
-        #self.lm.to(self.device)
 
     def add_adapters(
         self,
