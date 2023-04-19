@@ -1,7 +1,7 @@
 from dataclasses import dataclass, asdict
 import yaml
 from pprint import pprint
-from .utils import is_main
+from utils import is_main
 from typing import Optional
 import os
 from pathlib import Path

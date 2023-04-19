@@ -365,7 +365,7 @@ def build_labels(
     Additionally, masks out everything *after* the first eos token.
     """
     shape = input_embeddings.shape[:2]  # b, s
-
+    
     print(f'captions: {captions.shape[1]}')
     print(f'default: {shape[1]}')
     assert captions.shape[1] >= shape[1]

@@ -265,8 +265,13 @@ class Magma(nn.Module):
         labels = build_labels(
             input_embeddings, captions, self.eos_token, self.device
         )  # build labels from input_embeddings
+      
         word_embeddings = self.word_embedding(captions)
-
+        
+        # print('word_embeddings shape is {}'.format(word_embeddings.shape))
+        # print('input_embeddings shape is {}'.format(input_embeddings.shape))
+        # print('labels shape is {}'.format(labels.shape))
+        
         # join together
         input_embeddings = torch.cat(
             (
@@ -275,7 +280,7 @@ class Magma(nn.Module):
             ),  # remove padding in the word embedding before concatenating
             dim=1,
         )
-
+        
         # forward joined embeddings through lm
         lm_outputs = self.lm(
             inputs_embeds=input_embeddings,

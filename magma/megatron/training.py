@@ -346,7 +346,7 @@ def forward_step(
     data_iterator, model, neox_args, timers, return_logits=False, is_train=False
 ):
     """Forward step."""
-    if neox_args.is_pipe_parallel:
+    if False and neox_args.is_pipe_parallel:
         return model.eval_batch(data_iterator, return_logits=return_logits)
 
     # Get the batch.
@@ -359,7 +359,7 @@ def forward_step(
     if timers is not None:
         timers("batch generator").stop()
 
-    outputs = model((tokens, position_ids, attention_mask), neox_args=neox_args)
+    outputs = model(tokens, position_ids, attention_mask)#, neox_args=neox_args)
     if (
         is_train
         and neox_args.curriculum_learning
@@ -680,7 +680,8 @@ def train_step(neox_args, timers, data_iterator, model, optimizer, lr_scheduler)
     """Single training step."""
 
     # Pipeline parallelism schedules forward/backward/step
-    if neox_args.is_pipe_parallel:
+    if False and neox_args.is_pipe_parallel:
+        # print('I am using train_step_pipe')
         reduced_loss = train_step_pipe(
             neox_args=neox_args, timers=timers, model=model, data_iterator=data_iterator
         )

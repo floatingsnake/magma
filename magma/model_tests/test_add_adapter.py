@@ -1,6 +1,7 @@
 import sys
 sys.path.append('..')
-sys.path.append('/home/lfsm/code/magma/magma')
+sys.path.append('/home/lfsm/code/magma')
+# sys.path.append('/home/lfsm/code/magma/magma')
 
 import torch
 import torch.nn as nn
@@ -45,12 +46,6 @@ def add_adapters(
                         downsample_factor=downsample_factor,
                         **adapter_kwargs
                         )
-            # adapter_layer = nn.Sequential(
-            #     *[
-            #         mlp,
-            #         adapter,
-            #     ]
-            # )
             setattr(module,ff_attr,adapter_layer)   
         elif location in names and location==attn_attr:
             attn = getattr(module,attn_attr)

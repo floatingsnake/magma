@@ -16,10 +16,13 @@ import torch
 import math
 from torch.nn.parameter import Parameter
 
+import sys
+sys.path.append('..')
+
 from megatron import mpu
 from megatron.model.positional_embeddings import SinusoidalPositionalEmbedding
 from megatron.model.init_functions import get_init_methods
-
+from image_prefix import ImagePrefix
 
 class Embedding(torch.nn.Module):
     """Language model embeddings.
@@ -165,20 +168,43 @@ class Embedding(torch.nn.Module):
 class EmbeddingPipe(Embedding):
     """Extends Embedding to forward attention_mask through the pipeline."""
 
+    def __init__(self, neox_args,  hidden_size, vocab_size, max_sequence_length, embedding_dropout_prob, init_method, num_tokentypes=0, use_pos_emb=True):
+        super().__init__(neox_args, hidden_size, vocab_size, max_sequence_length, embedding_dropout_prob, init_method, num_tokentypes, use_pos_emb)
+        
+        from config import MultimodalConfig
+        self.image_prefix = ImagePrefix(
+            config=MultimodalConfig.from_yml('/home/lfsm/code/magma/configs/summit_clipH_pythia70m_web.yml'),
+            out_dim=neox_args.hidden_size,
+        )
+    
     @property
     def word_embeddings_weight(self):
         """Easy accessory for the pipeline engine to tie embeddings across stages."""
         return self.word_embeddings.weight
 
     def forward(self, args):
+        """Change to accept image and text pair""" 
+        # print('I can modify here')
+        
         assert (
-            len(args) == 3
-        ), f"Expected 3 arguments (input_ids, position_ids, attention_mask), but got {len(args)}."
+            len(args) == 4
+        ), f"Expected 4 arguments (images, input_ids, position_ids, attention_mask), but got {len(args)}."
+        
+        images = args[0]
+        input_ids = args[1]
+        position_ids = args[2]
+        attention_mask = args[3]
+        image_embeddings = self.image_prefix(images)
+        word_embeddings = super().forward(input_ids, position_ids)
 
-        input_ids = args[0]
-        position_ids = args[1]
-        attention_mask = args[2]
-        embeddings = super().forward(input_ids, position_ids)
+        embeddings = torch.cat(
+            (
+                image_embeddings,
+                word_embeddings[:, : -image_embeddings.shape[1], :],
+            ),  # remove padding in the word embedding before concatenating
+            dim=1,
+        )
+        
         return embeddings, attention_mask
 
 

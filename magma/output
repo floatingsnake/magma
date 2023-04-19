@@ -1,0 +1,1102 @@
+[2023-04-18 14:10:32,985] [WARNING] [runner.py:178:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+Detected CUDA_VISIBLE_DEVICES=0,1 but ignoring it because one or several of --include/--exclude/--num_gpus/--num_nodes cl args were used. If you want to use CUDA_VISIBLE_DEVICES don't pass any of these arguments to deepspeed.
+[2023-04-18 14:10:33,001] [INFO] [runner.py:524:main] cmd = /home/lfsm/anaconda3/envs/megatron/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMV19 --master_addr=127.0.0.1 --master_port=8888 --enable_each_rank_log=None model_tests/test_model_forward.py
+[2023-04-18 14:10:34,901] [INFO] [launch.py:130:main] WORLD INFO DICT: {'localhost': [0, 1]}
+[2023-04-18 14:10:34,901] [INFO] [launch.py:136:main] nnodes=1, num_local_procs=2, node_rank=0
+[2023-04-18 14:10:34,901] [INFO] [launch.py:147:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1]})
+[2023-04-18 14:10:34,901] [INFO] [launch.py:148:main] dist_world_size=2
+[2023-04-18 14:10:34,901] [INFO] [launch.py:150:main] Setting CUDA_VISIBLE_DEVICES=0,1
+NeoXArgs.from_ymls() ['/home/lfsm/code/magma/configs/19M.yml', '/home/lfsm/code/magma/configs/local_setup.yml']
+NeoXArgs.from_ymls() ['/home/lfsm/code/magma/configs/19M.yml', '/home/lfsm/code/magma/configs/local_setup.yml']
+NeoXArgs.configure_distributed_args() using world size: 2 and model-parallel size: 1 
+> building GPT2BPETokenizer tokenizer ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+> initializing torch distributed ...
+[2023-04-18 14:10:39,074] [INFO] [comm.py:590:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+> initializing model parallel with size 1
+MPU DP: [0, 1]
+MPU PP: [0]
+MPU PP: [1]
+MPU MP: [0]
+MPU MP: [1]
+> setting random seeds to 1234 ...
+[2023-04-18 14:10:39,127] [INFO] [checkpointing.py:226:model_parallel_cuda_manual_seed] > initializing model parallel cuda seeds on global rank 0, model parallel rank 0, and data parallel rank 0 with model parallel seed: 3952 and data parallel seed: 1234
+make: Entering directory '/home/lfsm/code/magma/magma/megatron/data'
+make: Nothing to be done for 'default'.
+make: Leaving directory '/home/lfsm/code/magma/magma/megatron/data'
+SEED_LAYERS=False BASE_SEED=1234 SEED_FN=None
+Using topology: {ProcessCoord(pipe=0, data=0, model=0): 0, ProcessCoord(pipe=0, data=1, model=0): 1}
+[2023-04-18 14:10:39,206] [INFO] [module.py:355:_partition_layers] Partitioning pipeline stages with method type:transformer|mlp
+stage=0 layers=11
+     0: EmbeddingPipe
+     1: _pre_transformer_block
+     2: ParallelTransformerLayerPipe
+     3: ParallelTransformerLayerPipe
+     4: ParallelTransformerLayerPipe
+     5: ParallelTransformerLayerPipe
+     6: ParallelTransformerLayerPipe
+     7: ParallelTransformerLayerPipe
+     8: _post_transformer_block
+     9: NormPipe
+    10: ParallelLinearPipe
+  loss: partial
+NeoXArgs.from_ymls() ['/home/lfsm/code/magma/configs/19M.yml', '/home/lfsm/code/magma/configs/local_setup.yml']
+NeoXArgs.from_ymls() ['/home/lfsm/code/magma/configs/19M.yml', '/home/lfsm/code/magma/configs/local_setup.yml']
+NeoXArgs.configure_distributed_args() using world size: 2 and model-parallel size: 1 
+> building GPT2BPETokenizer tokenizer ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+torch distributed is already initialized, skipping initialization ...
+_initialize_distributed() model parallel is already initialized
+> setting random seeds to 1234 ...
+[2023-04-18 14:10:40,577] [INFO] [checkpointing.py:226:model_parallel_cuda_manual_seed] > initializing model parallel cuda seeds on global rank 0, model parallel rank 0, and data parallel rank 0 with model parallel seed: 3952 and data parallel seed: 1234
+_initialize_distributed() model parallel is already initialized
+make: Entering directory '/home/lfsm/code/magma/magma/megatron/data'
+make: Nothing to be done for 'default'.
+make: Leaving directory '/home/lfsm/code/magma/magma/megatron/data'
+SEED_LAYERS=False BASE_SEED=1234 SEED_FN=None
+Using topology: {ProcessCoord(pipe=0, data=0, model=0): 0, ProcessCoord(pipe=0, data=1, model=0): 1}
+[2023-04-18 14:10:40,672] [INFO] [module.py:355:_partition_layers] Partitioning pipeline stages with method type:transformer|mlp
+stage=0 layers=11
+     0: EmbeddingPipe
+     1: _pre_transformer_block
+     2: ParallelTransformerLayerPipe
+     3: ParallelTransformerLayerPipe
+     4: ParallelTransformerLayerPipe
+     5: ParallelTransformerLayerPipe
+     6: ParallelTransformerLayerPipe
+     7: ParallelTransformerLayerPipe
+     8: _post_transformer_block
+     9: NormPipe
+    10: ParallelLinearPipe
+  loss: partial
+Loading NeoX language model...
+GPT2ModelPipe(
+  (tied_modules): ModuleDict()
+  (0): EmbeddingPipe(
+    (word_embeddings): VocabParallelEmbedding()
+    (embedding_dropout): Dropout(p=0, inplace=False)
+  )
+  (2): ParallelTransformerLayerPipe(
+    (input_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (attention): AdapterWrapper(
+      (adapter): Sequential(
+        (0): Linear(in_features=512, out_features=128, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=128, out_features=512, bias=True)
+      )
+      (attn_block): ParallelSelfAttention(
+        (query_key_value): ColumnParallelLinear()
+        (rotary_emb): RotaryEmbedding()
+        (scale_mask_softmax): FusedScaleMaskSoftmax()
+        (attention_dropout): Dropout(p=0, inplace=False)
+        (dense): RowParallelLinear()
+      )
+    )
+    (post_attention_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (mlp): AdapterWrapper(
+      (adapter): Sequential(
+        (0): Linear(in_features=512, out_features=128, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=128, out_features=512, bias=True)
+      )
+      (attn_block): ParallelMLP(
+        (dense_h_to_4h): ColumnParallelLinear()
+        (dense_4h_to_h): RowParallelLinear()
+      )
+    )
+  )
+  (3): ParallelTransformerLayerPipe(
+    (input_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (attention): AdapterWrapper(
+      (adapter): Sequential(
+        (0): Linear(in_features=512, out_features=128, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=128, out_features=512, bias=True)
+      )
+      (attn_block): ParallelSelfAttention(
+        (query_key_value): ColumnParallelLinear()
+        (rotary_emb): RotaryEmbedding()
+        (scale_mask_softmax): FusedScaleMaskSoftmax()
+        (attention_dropout): Dropout(p=0, inplace=False)
+        (dense): RowParallelLinear()
+      )
+    )
+    (post_attention_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (mlp): AdapterWrapper(
+      (adapter): Sequential(
+        (0): Linear(in_features=512, out_features=128, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=128, out_features=512, bias=True)
+      )
+      (attn_block): ParallelMLP(
+        (dense_h_to_4h): ColumnParallelLinear()
+        (dense_4h_to_h): RowParallelLinear()
+      )
+    )
+  )
+  (4): ParallelTransformerLayerPipe(
+    (input_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (attention): AdapterWrapper(
+      (adapter): Sequential(
+        (0): Linear(in_features=512, out_features=128, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=128, out_features=512, bias=True)
+      )
+      (attn_block): ParallelSelfAttention(
+        (query_key_value): ColumnParallelLinear()
+        (rotary_emb): RotaryEmbedding()
+        (scale_mask_softmax): FusedScaleMaskSoftmax()
+        (attention_dropout): Dropout(p=0, inplace=False)
+        (dense): RowParallelLinear()
+      )
+    )
+    (post_attention_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (mlp): AdapterWrapper(
+      (adapter): Sequential(
+        (0): Linear(in_features=512, out_features=128, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=128, out_features=512, bias=True)
+      )
+      (attn_block): ParallelMLP(
+        (dense_h_to_4h): ColumnParallelLinear()
+        (dense_4h_to_h): RowParallelLinear()
+      )
+    )
+  )
+  (5): ParallelTransformerLayerPipe(
+    (input_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (attention): AdapterWrapper(
+      (adapter): Sequential(
+        (0): Linear(in_features=512, out_features=128, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=128, out_features=512, bias=True)
+      )
+      (attn_block): ParallelSelfAttention(
+        (query_key_value): ColumnParallelLinear()
+        (rotary_emb): RotaryEmbedding()
+        (scale_mask_softmax): FusedScaleMaskSoftmax()
+        (attention_dropout): Dropout(p=0, inplace=False)
+        (dense): RowParallelLinear()
+      )
+    )
+    (post_attention_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (mlp): AdapterWrapper(
+      (adapter): Sequential(
+        (0): Linear(in_features=512, out_features=128, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=128, out_features=512, bias=True)
+      )
+      (attn_block): ParallelMLP(
+        (dense_h_to_4h): ColumnParallelLinear()
+        (dense_4h_to_h): RowParallelLinear()
+      )
+    )
+  )
+  (6): ParallelTransformerLayerPipe(
+    (input_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (attention): AdapterWrapper(
+      (adapter): Sequential(
+        (0): Linear(in_features=512, out_features=128, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=128, out_features=512, bias=True)
+      )
+      (attn_block): ParallelSelfAttention(
+        (query_key_value): ColumnParallelLinear()
+        (rotary_emb): RotaryEmbedding()
+        (scale_mask_softmax): FusedScaleMaskSoftmax()
+        (attention_dropout): Dropout(p=0, inplace=False)
+        (dense): RowParallelLinear()
+      )
+    )
+    (post_attention_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (mlp): AdapterWrapper(
+      (adapter): Sequential(
+        (0): Linear(in_features=512, out_features=128, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=128, out_features=512, bias=True)
+      )
+      (attn_block): ParallelMLP(
+        (dense_h_to_4h): ColumnParallelLinear()
+        (dense_4h_to_h): RowParallelLinear()
+      )
+    )
+  )
+  (7): ParallelTransformerLayerPipe(
+    (input_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (attention): AdapterWrapper(
+      (adapter): Sequential(
+        (0): Linear(in_features=512, out_features=128, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=128, out_features=512, bias=True)
+      )
+      (attn_block): ParallelSelfAttention(
+        (query_key_value): ColumnParallelLinear()
+        (rotary_emb): RotaryEmbedding()
+        (scale_mask_softmax): FusedScaleMaskSoftmax()
+        (attention_dropout): Dropout(p=0, inplace=False)
+        (dense): RowParallelLinear()
+      )
+    )
+    (post_attention_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (mlp): AdapterWrapper(
+      (adapter): Sequential(
+        (0): Linear(in_features=512, out_features=128, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=128, out_features=512, bias=True)
+      )
+      (attn_block): ParallelMLP(
+        (dense_h_to_4h): ColumnParallelLinear()
+        (dense_4h_to_h): RowParallelLinear()
+      )
+    )
+  )
+  (9): NormPipe(
+    (norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+  )
+  (10): ParallelLinearPipe(
+    (final_linear): ColumnParallelLinear()
+  )
+)
+
+
+Magma(
+  (lm): GPTNeoXForCausalLM(
+    (gpt_neox): GPTNeoXModel(
+      (embed_in): Embedding(50278, 512)
+      (layers): ModuleList(
+        (0): GPTNeoXLayer(
+          (input_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (post_attention_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attention): AdapterWrapper(
+            (adapter): Sequential(
+              (0): Linear(in_features=512, out_features=64, bias=True)
+              (1): ReLU()
+              (2): Linear(in_features=64, out_features=512, bias=True)
+            )
+            (attn_block): GPTNeoXAttention(
+              (rotary_emb): RotaryEmbedding()
+              (query_key_value): Linear(in_features=512, out_features=1536, bias=True)
+              (dense): Linear(in_features=512, out_features=512, bias=True)
+            )
+          )
+          (mlp): Sequential(
+            (0): GPTNeoXMLP(
+              (dense_h_to_4h): Linear(in_features=512, out_features=2048, bias=True)
+              (dense_4h_to_h): Linear(in_features=2048, out_features=512, bias=True)
+              (act): GELUActivation()
+            )
+            (1): Adapter(
+              (adapter): Sequential(
+                (0): Linear(in_features=512, out_features=64, bias=True)
+                (1): ReLU()
+                (2): Linear(in_features=64, out_features=512, bias=True)
+              )
+            )
+          )
+        )
+        (1): GPTNeoXLayer(
+          (input_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (post_attention_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attention): AdapterWrapper(
+            (adapter): Sequential(
+              (0): Linear(in_features=512, out_features=64, bias=True)
+              (1): ReLU()
+              (2): Linear(in_features=64, out_features=512, bias=True)
+            )
+            (attn_block): GPTNeoXAttention(
+              (rotary_emb): RotaryEmbedding()
+              (query_key_value): Linear(in_features=512, out_features=1536, bias=True)
+              (dense): Linear(in_features=512, out_features=512, bias=True)
+            )
+          )
+          (mlp): Sequential(
+            (0): GPTNeoXMLP(
+              (dense_h_to_4h): Linear(in_features=512, out_features=2048, bias=True)
+              (dense_4h_to_h): Linear(in_features=2048, out_features=512, bias=True)
+              (act): GELUActivation()
+            )
+            (1): Adapter(
+              (adapter): Sequential(
+                (0): Linear(in_features=512, out_features=64, bias=True)
+                (1): ReLU()
+                (2): Linear(in_features=64, out_features=512, bias=True)
+              )
+            )
+          )
+        )
+        (2): GPTNeoXLayer(
+          (input_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (post_attention_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attention): AdapterWrapper(
+            (adapter): Sequential(
+              (0): Linear(in_features=512, out_features=64, bias=True)
+              (1): ReLU()
+              (2): Linear(in_features=64, out_features=512, bias=True)
+            )
+            (attn_block): GPTNeoXAttention(
+              (rotary_emb): RotaryEmbedding()
+              (query_key_value): Linear(in_features=512, out_features=1536, bias=True)
+              (dense): Linear(in_features=512, out_features=512, bias=True)
+            )
+          )
+          (mlp): Sequential(
+            (0): GPTNeoXMLP(
+              (dense_h_to_4h): Linear(in_features=512, out_features=2048, bias=True)
+              (dense_4h_to_h): Linear(in_features=2048, out_features=512, bias=True)
+              (act): GELUActivation()
+            )
+            (1): Adapter(
+              (adapter): Sequential(
+                (0): Linear(in_features=512, out_features=64, bias=True)
+                (1): ReLU()
+                (2): Linear(in_features=64, out_features=512, bias=True)
+              )
+            )
+          )
+        )
+        (3): GPTNeoXLayer(
+          (input_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (post_attention_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attention): AdapterWrapper(
+            (adapter): Sequential(
+              (0): Linear(in_features=512, out_features=64, bias=True)
+              (1): ReLU()
+              (2): Linear(in_features=64, out_features=512, bias=True)
+            )
+            (attn_block): GPTNeoXAttention(
+              (rotary_emb): RotaryEmbedding()
+              (query_key_value): Linear(in_features=512, out_features=1536, bias=True)
+              (dense): Linear(in_features=512, out_features=512, bias=True)
+            )
+          )
+          (mlp): Sequential(
+            (0): GPTNeoXMLP(
+              (dense_h_to_4h): Linear(in_features=512, out_features=2048, bias=True)
+              (dense_4h_to_h): Linear(in_features=2048, out_features=512, bias=True)
+              (act): GELUActivation()
+            )
+            (1): Adapter(
+              (adapter): Sequential(
+                (0): Linear(in_features=512, out_features=64, bias=True)
+                (1): ReLU()
+                (2): Linear(in_features=64, out_features=512, bias=True)
+              )
+            )
+          )
+        )
+        (4): GPTNeoXLayer(
+          (input_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (post_attention_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attention): AdapterWrapper(
+            (adapter): Sequential(
+              (0): Linear(in_features=512, out_features=64, bias=True)
+              (1): ReLU()
+              (2): Linear(in_features=64, out_features=512, bias=True)
+            )
+            (attn_block): GPTNeoXAttention(
+              (rotary_emb): RotaryEmbedding()
+              (query_key_value): Linear(in_features=512, out_features=1536, bias=True)
+              (dense): Linear(in_features=512, out_features=512, bias=True)
+            )
+          )
+          (mlp): Sequential(
+            (0): GPTNeoXMLP(
+              (dense_h_to_4h): Linear(in_features=512, out_features=2048, bias=True)
+              (dense_4h_to_h): Linear(in_features=2048, out_features=512, bias=True)
+              (act): GELUActivation()
+            )
+            (1): Adapter(
+              (adapter): Sequential(
+                (0): Linear(in_features=512, out_features=64, bias=True)
+                (1): ReLU()
+                (2): Linear(in_features=64, out_features=512, bias=True)
+              )
+            )
+          )
+        )
+        (5): GPTNeoXLayer(
+          (input_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (post_attention_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attention): AdapterWrapper(
+            (adapter): Sequential(
+              (0): Linear(in_features=512, out_features=64, bias=True)
+              (1): ReLU()
+              (2): Linear(in_features=64, out_features=512, bias=True)
+            )
+            (attn_block): GPTNeoXAttention(
+              (rotary_emb): RotaryEmbedding()
+              (query_key_value): Linear(in_features=512, out_features=1536, bias=True)
+              (dense): Linear(in_features=512, out_features=512, bias=True)
+            )
+          )
+          (mlp): Sequential(
+            (0): GPTNeoXMLP(
+              (dense_h_to_4h): Linear(in_features=512, out_features=2048, bias=True)
+              (dense_4h_to_h): Linear(in_features=2048, out_features=512, bias=True)
+              (act): GELUActivation()
+            )
+            (1): Adapter(
+              (adapter): Sequential(
+                (0): Linear(in_features=512, out_features=64, bias=True)
+                (1): ReLU()
+                (2): Linear(in_features=64, out_features=512, bias=True)
+              )
+            )
+          )
+        )
+      )
+      (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    )
+    (embed_out): Linear(in_features=512, out_features=50278, bias=False)
+  )
+  (word_embedding): Embedding(50278, 512)
+  (transformer): ModuleList(
+    (0): GPTNeoXLayer(
+      (input_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (post_attention_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (attention): AdapterWrapper(
+        (adapter): Sequential(
+          (0): Linear(in_features=512, out_features=64, bias=True)
+          (1): ReLU()
+          (2): Linear(in_features=64, out_features=512, bias=True)
+        )
+        (attn_block): GPTNeoXAttention(
+          (rotary_emb): RotaryEmbedding()
+          (query_key_value): Linear(in_features=512, out_features=1536, bias=True)
+          (dense): Linear(in_features=512, out_features=512, bias=True)
+        )
+      )
+      (mlp): Sequential(
+        (0): GPTNeoXMLP(
+          (dense_h_to_4h): Linear(in_features=512, out_features=2048, bias=True)
+          (dense_4h_to_h): Linear(in_features=2048, out_features=512, bias=True)
+          (act): GELUActivation()
+        )
+        (1): Adapter(
+          (adapter): Sequential(
+            (0): Linear(in_features=512, out_features=64, bias=True)
+            (1): ReLU()
+            (2): Linear(in_features=64, out_features=512, bias=True)
+          )
+        )
+      )
+    )
+    (1): GPTNeoXLayer(
+      (input_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (post_attention_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (attention): AdapterWrapper(
+        (adapter): Sequential(
+          (0): Linear(in_features=512, out_features=64, bias=True)
+          (1): ReLU()
+          (2): Linear(in_features=64, out_features=512, bias=True)
+        )
+        (attn_block): GPTNeoXAttention(
+          (rotary_emb): RotaryEmbedding()
+          (query_key_value): Linear(in_features=512, out_features=1536, bias=True)
+          (dense): Linear(in_features=512, out_features=512, bias=True)
+        )
+      )
+      (mlp): Sequential(
+        (0): GPTNeoXMLP(
+          (dense_h_to_4h): Linear(in_features=512, out_features=2048, bias=True)
+          (dense_4h_to_h): Linear(in_features=2048, out_features=512, bias=True)
+          (act): GELUActivation()
+        )
+        (1): Adapter(
+          (adapter): Sequential(
+            (0): Linear(in_features=512, out_features=64, bias=True)
+            (1): ReLU()
+            (2): Linear(in_features=64, out_features=512, bias=True)
+          )
+        )
+      )
+    )
+    (2): GPTNeoXLayer(
+      (input_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (post_attention_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (attention): AdapterWrapper(
+        (adapter): Sequential(
+          (0): Linear(in_features=512, out_features=64, bias=True)
+          (1): ReLU()
+          (2): Linear(in_features=64, out_features=512, bias=True)
+        )
+        (attn_block): GPTNeoXAttention(
+          (rotary_emb): RotaryEmbedding()
+          (query_key_value): Linear(in_features=512, out_features=1536, bias=True)
+          (dense): Linear(in_features=512, out_features=512, bias=True)
+        )
+      )
+      (mlp): Sequential(
+        (0): GPTNeoXMLP(
+          (dense_h_to_4h): Linear(in_features=512, out_features=2048, bias=True)
+          (dense_4h_to_h): Linear(in_features=2048, out_features=512, bias=True)
+          (act): GELUActivation()
+        )
+        (1): Adapter(
+          (adapter): Sequential(
+            (0): Linear(in_features=512, out_features=64, bias=True)
+            (1): ReLU()
+            (2): Linear(in_features=64, out_features=512, bias=True)
+          )
+        )
+      )
+    )
+    (3): GPTNeoXLayer(
+      (input_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (post_attention_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (attention): AdapterWrapper(
+        (adapter): Sequential(
+          (0): Linear(in_features=512, out_features=64, bias=True)
+          (1): ReLU()
+          (2): Linear(in_features=64, out_features=512, bias=True)
+        )
+        (attn_block): GPTNeoXAttention(
+          (rotary_emb): RotaryEmbedding()
+          (query_key_value): Linear(in_features=512, out_features=1536, bias=True)
+          (dense): Linear(in_features=512, out_features=512, bias=True)
+        )
+      )
+      (mlp): Sequential(
+        (0): GPTNeoXMLP(
+          (dense_h_to_4h): Linear(in_features=512, out_features=2048, bias=True)
+          (dense_4h_to_h): Linear(in_features=2048, out_features=512, bias=True)
+          (act): GELUActivation()
+        )
+        (1): Adapter(
+          (adapter): Sequential(
+            (0): Linear(in_features=512, out_features=64, bias=True)
+            (1): ReLU()
+            (2): Linear(in_features=64, out_features=512, bias=True)
+          )
+        )
+      )
+    )
+    (4): GPTNeoXLayer(
+      (input_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (post_attention_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (attention): AdapterWrapper(
+        (adapter): Sequential(
+          (0): Linear(in_features=512, out_features=64, bias=True)
+          (1): ReLU()
+          (2): Linear(in_features=64, out_features=512, bias=True)
+        )
+        (attn_block): GPTNeoXAttention(
+          (rotary_emb): RotaryEmbedding()
+          (query_key_value): Linear(in_features=512, out_features=1536, bias=True)
+          (dense): Linear(in_features=512, out_features=512, bias=True)
+        )
+      )
+      (mlp): Sequential(
+        (0): GPTNeoXMLP(
+          (dense_h_to_4h): Linear(in_features=512, out_features=2048, bias=True)
+          (dense_4h_to_h): Linear(in_features=2048, out_features=512, bias=True)
+          (act): GELUActivation()
+        )
+        (1): Adapter(
+          (adapter): Sequential(
+            (0): Linear(in_features=512, out_features=64, bias=True)
+            (1): ReLU()
+            (2): Linear(in_features=64, out_features=512, bias=True)
+          )
+        )
+      )
+    )
+    (5): GPTNeoXLayer(
+      (input_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (post_attention_layernorm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (attention): AdapterWrapper(
+        (adapter): Sequential(
+          (0): Linear(in_features=512, out_features=64, bias=True)
+          (1): ReLU()
+          (2): Linear(in_features=64, out_features=512, bias=True)
+        )
+        (attn_block): GPTNeoXAttention(
+          (rotary_emb): RotaryEmbedding()
+          (query_key_value): Linear(in_features=512, out_features=1536, bias=True)
+          (dense): Linear(in_features=512, out_features=512, bias=True)
+        )
+      )
+      (mlp): Sequential(
+        (0): GPTNeoXMLP(
+          (dense_h_to_4h): Linear(in_features=512, out_features=2048, bias=True)
+          (dense_4h_to_h): Linear(in_features=2048, out_features=512, bias=True)
+          (act): GELUActivation()
+        )
+        (1): Adapter(
+          (adapter): Sequential(
+            (0): Linear(in_features=512, out_features=64, bias=True)
+            (1): ReLU()
+            (2): Linear(in_features=64, out_features=512, bias=True)
+          )
+        )
+      )
+    )
+  )
+  (image_prefix): ImagePrefix(
+    (enc): VisionTransformer(
+      (patchnorm_pre_ln): Identity()
+      (conv1): Conv2d(3, 1280, kernel_size=(14, 14), stride=(14, 14), bias=False)
+      (patch_dropout): Identity()
+      (ln_pre): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+      (transformer): Transformer(
+        (resblocks): ModuleList(
+          (0): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (1): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (2): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (3): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (4): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (5): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (6): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (7): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (8): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (9): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (10): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (11): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (12): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (13): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (14): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (15): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (16): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (17): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (18): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (19): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (20): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (21): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (22): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (23): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (24): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (25): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (26): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (27): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (28): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (29): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (30): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+          (31): ResidualAttentionBlock(
+            (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (attn): MultiheadAttention(
+              (out_proj): NonDynamicallyQuantizableLinear(in_features=1280, out_features=1280, bias=True)
+            )
+            (ls_1): Identity()
+            (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (c_fc): Linear(in_features=1280, out_features=5120, bias=True)
+              (gelu): GELU(approximate='none')
+              (c_proj): Linear(in_features=5120, out_features=1280, bias=True)
+            )
+            (ls_2): Identity()
+          )
+        )
+      )
+      (ln_post): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+    )
+    (proj): Linear(in_features=1024, out_features=512, bias=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+    (ln): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+  )
+)
+[2023-04-18 14:10:54,931] [INFO] [launch.py:294:sigkill_handler] Killing subprocess 628629
+[2023-04-18 14:10:54,932] [INFO] [launch.py:294:sigkill_handler] Killing subprocess 628630
+[2023-04-18 14:10:55,301] [ERROR] [launch.py:300:sigkill_handler] ['/home/lfsm/anaconda3/envs/megatron/bin/python', '-u', 'model_tests/test_model_forward.py', '--local_rank=1'] exits with return code = 1

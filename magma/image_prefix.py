@@ -2,8 +2,8 @@ import torch
 import torch.nn as nn
 from torchtyping import TensorType
 from einops import rearrange
-from .image_encoders import get_image_encoder
-from .config import MultimodalConfig
+from image_encoders import get_image_encoder
+from config import MultimodalConfig
 
 # ------------------------- Image prefix ----------------------------------
 
