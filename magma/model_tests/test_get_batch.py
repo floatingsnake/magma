@@ -45,8 +45,14 @@ def get_attn_mask(seq_length, device):
     # convert to binary
     return mask < 0.5
 
-def get_pipeline_batch(images, captions, eos_token):
+import megatron.mpu as mpu
+def get_pipeline_batch(input, eos_token):
     """Get input of model from one batch of image-text pair dataset """
+    images = mpu.broadcast_data(["img"],input,input['img'].dtype)
+    captions = mpu.broadcast_data(["cap"],input,input['cap'].dtype) 
+   
+    images, captions = images['img'], captions['cap']
+    
     batch_size, seq_length = captions.shape 
     
     position_ids = torch.arange(seq_length, dtype=torch.long, device=captions.device)

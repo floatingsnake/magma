@@ -184,16 +184,19 @@ class EmbeddingPipe(Embedding):
 
     def forward(self, args):
         """Change to accept image and text pair""" 
-        # print('I can modify here')
         
         assert (
             len(args) == 4
         ), f"Expected 4 arguments (images, input_ids, position_ids, attention_mask), but got {len(args)}."
-        
+
         images = args[0]
         input_ids = args[1]
         position_ids = args[2]
         attention_mask = args[3]
+        # input_ids = args[0]
+        # position_ids = args[1]
+        # attention_mask = args[2]
+        print(images.shape)
         image_embeddings = self.image_prefix(images)
         word_embeddings = super().forward(input_ids, position_ids)
 
@@ -204,7 +207,7 @@ class EmbeddingPipe(Embedding):
             ),  # remove padding in the word embedding before concatenating
             dim=1,
         )
-        
+
         return embeddings, attention_mask
 
 

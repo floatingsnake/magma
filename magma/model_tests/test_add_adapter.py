@@ -12,19 +12,6 @@ import deepspeed
 from megatron.model import GPT2ModelPipe
 from magma.adapters import Adapter,AdapterWrapper
 
-neox_args = NeoXArgs.from_ymls(['/home/lfsm/code/magma/configs/19M.yml','/home/lfsm/code/magma/configs/local_setup.yml'])
-neox_args.configure_distributed_args()
-neox_args.build_tokenizer()  # tokenizer needs to be build in training in order to set the padding vocab
-
-initialize_megatron(neox_args=neox_args)
-lm = GPT2ModelPipe(
-            neox_args=neox_args,
-            num_tokentypes=0,
-            parallel_output=True,
-            topology=mpu.get_topology(),
-        ) 
-
-
 from typing import Literal
 def add_adapters(
         neox_args,
@@ -58,16 +45,31 @@ def add_adapters(
             setattr(module,attn_attr,adapter_layer)          
     return model                 
 
-add_adapters(neox_args,lm,location='mlp') 
-add_adapters(neox_args,lm,location='attention') 
 
 # magma
 
-from magma.magma import Magma
-config = r'/home/lfsm/code/magma/configs/summit_clipH_pythia70m_web.yml'
-magma = Magma(config=config)
-print(lm)
-print(magma)
+if __name__ == '__main__':
+
+  neox_args = NeoXArgs.from_ymls(['/home/lfsm/code/magma/configs/800M.yml','/home/lfsm/code/magma/configs/local_setup.yml'])
+  neox_args.configure_distributed_args()
+  neox_args.build_tokenizer()  # tokenizer needs to be build in training in order to set the padding vocab
+
+  initialize_megatron(neox_args=neox_args)
+  lm = GPT2ModelPipe(
+              neox_args=neox_args,
+              num_tokentypes=0,
+              parallel_output=True,
+              topology=mpu.get_topology(),
+          ) 
+
+  add_adapters(neox_args,lm,location='mlp') 
+  add_adapters(neox_args,lm,location='attention') 
+
+  from magma.magma import Magma
+  config = r'/home/lfsm/code/magma/configs/summit_clipH_pythia70m_web.yml'
+  magma = Magma(config=config)
+  print(lm)
+  print(magma)
 
 '''
 original magma:

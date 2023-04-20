@@ -259,7 +259,7 @@ class Magma(nn.Module):
         assert (
             captions.shape[1] == self.seq_len
         ), f"in training, captions should be padded to sequence length ({self.seq_len}), but are length {captions.shape[1]}"
-
+        
         if input_embeddings is None:
             input_embeddings = self.image_prefix(images)
         labels = build_labels(

@@ -65,7 +65,8 @@ class NeoXArgsParallelism(NeoXArgsTemplate):
     Size of the model parallelism.
     """
 
-    pipe_partition_method: str = "type:transformer|mlp"
+    # pipe_partition_method: str = "type:transformer|mlp"
+    pipe_partition_method: str = "parameters" ### change into parameters to balance added image_prefix
     """
     method used to distribute model layers across pipeline stages. Choose from "parameters", which balances the number
     of parameters on each pipeline stage, "uniform", which naively balances the number of layers per stage, or

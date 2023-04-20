@@ -13,7 +13,7 @@ from megatron.model import GPT2ModelPipe
 # make config
 torch.manual_seed(7)
 # neox_args = NeoXArgs.from_ymls(['/home/lfsm/code/magma/configs/20B.yml'])
-neox_args = NeoXArgs.from_ymls(['/home/lfsm/code/magma/configs/1-3B.yml','/home/lfsm/code/magma/configs/local_setup.yml'])
+neox_args = NeoXArgs.from_ymls(['/home/lfsm/code/magma/configs/800M.yml','/home/lfsm/code/magma/configs/local_setup.yml'])
 neox_args.configure_distributed_args()
 neox_args.build_tokenizer() # tokenizer needs to be build in training in order to set the padding vocab
 
@@ -31,8 +31,8 @@ model = GPT2ModelPipe(
 
 # add adapter
 from test_add_adapter import add_adapters
-add_adapters(neox_args,model,location='mlp') 
-add_adapters(neox_args,model,location='attention') 
+# add_adapters(neox_args,model,location='mlp') 
+# add_adapters(neox_args,model,location='attention') 
 
 # opt, lr
 optimizer = torch.optim.Adam(model.parameters(),lr=1e-5)
@@ -49,5 +49,34 @@ model, optimizer, _, lr_scheduler = deepspeed.initialize(
     mpu=mpu if not neox_args.is_pipe_parallel else None,
 )
 
+from functools import partial
+from test_get_batch import get_pipeline_batch
+
+model.set_batch_fn(
+    partial(
+        get_pipeline_batch, eos_token=0
+    )
+)
+mbs = 4
+data_list = list()
+images, captions = torch.Tensor(mbs,3,224,224).half().cuda(), torch.Tensor(mbs,2048).long().cuda()
+
+# image_prefix works
+# from image_prefix import ImagePrefix
+# from config import MultimodalConfig
+# image_prefix = ImagePrefix(
+#             config=MultimodalConfig.from_yml('/home/lfsm/code/magma/configs/summit_clipH_pythia70m_web.yml'),
+#             out_dim=neox_args.hidden_size,
+#         ).cuda()
+# image_prefix(images)
+
+for i in range(10):
+    data_list.append({'img':images, 'cap':captions})
+data_iterator = iter(data_list)
+
 device = torch.device('cuda',neox_args.local_rank)
 print("{} GPU used memory is {:.2f} GB".format(neox_args.local_rank,torch.cuda.max_memory_allocated(device)/1073741824))
+
+for i in range(2):
+    loss = model.train_batch(data_iter=data_iterator)
+    print(loss)
