@@ -49,9 +49,9 @@ import megatron.mpu as mpu
 def get_pipeline_batch(input, eos_token):
     """Get input of model from one batch of image-text pair dataset """
     images = mpu.broadcast_data(["img"],input,input['img'].dtype)
-    captions = mpu.broadcast_data(["cap"],input,input['cap'].dtype) 
-   
-    images, captions = images['img'], captions['cap']
+    captions = mpu.broadcast_data(["text"],input,input['text'].dtype) 
+    images = images["img"].contiguous()
+    captions = captions["text"].contiguous()
     
     batch_size, seq_length = captions.shape 
     
@@ -66,6 +66,7 @@ def get_pipeline_batch(input, eos_token):
     labels,loss_mask = build_labels(captions, eos_token)
     
     return (images, captions, position_ids, attention_mask), (labels, loss_mask)
+    # return (captions, position_ids, attention_mask), (labels, loss_mask)
 
 if __name__ == '__main__':
    mbs = 13

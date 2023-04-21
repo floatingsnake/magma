@@ -23,7 +23,10 @@ def add_adapters(
         attn_attr: str = "attention",
         **adapter_kwargs,    
 ):
-    for _, module in model.named_modules():
+    for names, module in model.named_modules():
+        if 'image_prefix' in names:
+          continue
+          # avoid add adapter in image_prefix, may need modification when change the image_prefixer
         names = [name for name,module in module.named_modules()]
         if location in names and location==ff_attr:
             mlp = getattr(module,ff_attr)
@@ -64,12 +67,8 @@ if __name__ == '__main__':
 
   add_adapters(neox_args,lm,location='mlp') 
   add_adapters(neox_args,lm,location='attention') 
-
-  from magma.magma import Magma
-  config = r'/home/lfsm/code/magma/configs/summit_clipH_pythia70m_web.yml'
-  magma = Magma(config=config)
   print(lm)
-  print(magma)
+  print("hello, world")
 
 '''
 original magma:
