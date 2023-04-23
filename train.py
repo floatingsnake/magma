@@ -146,9 +146,7 @@ if __name__ == "__main__":
             wandb_log(to_log, step=global_step)
 
         ##### Evaluation phase
-        ### eval step can't use due to:
-        ###     1.model infernece step need fix. 
-        ###     2.no eval data pass 
+        ### eval step can't use due to model infernece step need fix. 
         if False and global_step % config.eval_every == 0:
             model_engine.eval()
             with torch.no_grad():
