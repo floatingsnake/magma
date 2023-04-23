@@ -12,7 +12,7 @@ def parse_args():
     parser.add_argument(
         "--train-data",
         type=str,
-        default="/gpfs/alpine/csc499/proj-shared/LAION-400m-webdataset/data/{00000..41455}.tar",
+        default="/gpfs/alpine/csc499/proj-shared/LAION-400m-webdataset/data/{41400..41401}.tar",
         help="Path to csv filewith training data",
     )
     parser.add_argument(
@@ -24,14 +24,15 @@ def parse_args():
     parser.add_argument(
         "--train-num-samples",
         type=int,
-        default=407332084,
+        #default=407332084,
+        default=1084,
         help="Number of samples in dataset. Required for webdataset if not available in info file.",
     )
     parser.add_argument(
         "--seed", type=int, default=0, help="Default random seed."
     )
     parser.add_argument(
-        "--micro-batch-size", type=int, default=64, help="Batch size per GPU."
+        "--micro-batch-size", type=int, default=128, help="Batch size per GPU."
     )
     parser.add_argument(
         "--workers", type=int, default=1, help="Number of dataloader workers per GPU."
@@ -57,9 +58,30 @@ data = get_wds_dataset(args, preprocess_img=transforms, preprocess_text=preproce
 data.set_epoch(0)
 dataloader = data.dataloader
 i=0
+print('start get data')
 for batch in dataloader:
     i += 1
-    print(batch[0].shape)
-    if i == 1000:
-        print("sample 1000 times done")
-        break
+    print(i)
+    if i % 100==0:
+        print(f"sample {i} times done")
+print(f'total sample number is {i}')
+
+
+def cycle(loader):
+    while True:
+        for data in loader:
+            yield data
+
+dataloader = cycle(dataloader)
+print('start over one epoch simmulation')
+for i in range(407332084):
+    batch = next(dataloader)
+    i += 1
+    print(i)
+    if i % 1000000==0:
+        print(f"sample {i} times done")
+print(f'total sample number is {i}')
+
+
+
+
