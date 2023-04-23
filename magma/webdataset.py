@@ -68,6 +68,7 @@ def group_by_keys_nothrow(data, keys=base_plus_ext, lcase=True, suffixes=None, h
 class SharedEpoch:
     def __init__(self, epoch: int = 0):
         self.shared_epoch = Value('i', epoch)
+        ## 0
 
     def set_value(self, epoch):
         self.shared_epoch.value = epoch
@@ -98,9 +99,11 @@ class DataInfo:
 
 def get_dataset_size(shards):
     shards_list = list(braceexpand.braceexpand(shards))
+    ### list(iter(1-n.tar))
     dir_path = os.path.dirname(shards)
     sizes_filename = os.path.join(dir_path, 'sizes.json')
     len_filename = os.path.join(dir_path, '__len__')
+    ### config some file
     if os.path.exists(sizes_filename):
         sizes = json.load(open(sizes_filename, 'r'))
         total_size = sum([int(sizes[os.path.basename(shard)]) for shard in shards_list])
@@ -115,6 +118,7 @@ def get_dataset_size(shards):
         # LAION-400M: 407332084
         # LAION-2B (english): 2170337258
     num_shards = len(shards_list)
+    ### get shards num, but don't know the size.
     return total_size, num_shards
 
 class ResampledShards2(IterableDataset):
@@ -134,10 +138,13 @@ class ResampledShards2(IterableDataset):
         """
         super().__init__()
         urls = wds.shardlists.expand_urls(urls)
+        ### get all urls in list [1-n.tar]
         self.urls = urls
         assert isinstance(self.urls[0], str)
+        ### insure it's a address
         self.nshards = nshards
         self.rng = random.Random()
+        ### get a random generate key
         self.worker_seed = pytorch_worker_seed if worker_seed is None else worker_seed
         self.deterministic = deterministic
         self.epoch = epoch
@@ -145,6 +152,7 @@ class ResampledShards2(IterableDataset):
     def __iter__(self):
         """Return an iterator over the shards."""
         if isinstance(self.epoch, SharedEpoch):
+            ### ensure it is in the same epoch
             epoch = self.epoch.get_value()
         else:
             # NOTE: this is epoch tracking is problematic in a multiprocess (dataloader workers or train)
@@ -156,6 +164,7 @@ class ResampledShards2(IterableDataset):
             self.rng.seed(self.worker_seed() + epoch)
         for _ in range(self.nshards):
             yield dict(url=self.rng.choice(self.urls))
+            ### get one url/tar at a time till the end.
 
 _SHARD_SHUFFLE_SIZE = 2000
 _SHARD_SHUFFLE_INITIAL = 500
@@ -165,8 +174,11 @@ _SAMPLE_SHUFFLE_INITIAL = 1000
 def tarfile_to_samples_nothrow(src, handler=log_and_continue):
     # NOTE this is a re-impl of the webdataset impl with group_by_keys that doesn't throw
     streams = url_opener(src, handler=handler)
+    ### get the tar
     files = tar_file_expander(streams, handler=handler)
+    ### expand the tar
     samples = group_by_keys_nothrow(files, handler=handler)
+    ### group through keys and get the real samples
     return samples
 
 
@@ -197,29 +209,36 @@ class detshuffle2(wds.PipelineStage):
         else:
             seed = self.seed + epoch
         rng.seed(seed)
+        ### shuffle the src
         return _shuffle(src, self.bufsize, self.initial, rng)
 
 def get_wds_dataset(args, preprocess_img, preprocess_text, is_train, epoch=0, floor=False):
     input_shards = args.train_data if is_train else args.val_data
+    ### input_shared = {1.tar, 2.tar...n.tar}
     assert input_shards is not None
     resampled = getattr(args, 'dataset_resampled', False) and is_train
 
     num_samples, num_shards = get_dataset_size(input_shards)
+    ### none and 41445
     if not num_samples:
         if is_train:
-            num_samples = args.train_num_samples
+            num_samples = args.train_num_samples 
+            ### get samples num directly by input config 407332084
             if not num_samples:
                 raise RuntimeError(
                     'Currently, number of dataset samples must be specified for training dataset. '
                     'Please specify via `--train-num-samples` if no dataset length info present.')
         else:
             num_samples = args.val_num_samples or 0  # eval will just exhaust the iterator if not specified
-
     shared_epoch = SharedEpoch(epoch=epoch)  # create a shared epoch store to sync epoch to dataloader worker proc
+    ### epoch = 0
     if resampled:
+        ### False
         pipeline = [ResampledShards2(input_shards, deterministic=True, epoch=shared_epoch)]
+        ### this will return one tar at a time.
     else:
         pipeline = [wds.SimpleShardList(input_shards)]
+        ### An iterable dataset yielding a list of url
 
     # at this point we have an iterator over all the shards
     if is_train:
@@ -237,10 +256,12 @@ def get_wds_dataset(args, preprocess_img, preprocess_text, is_train, epoch=0, fl
         pipeline.extend([
             # at this point, we have an iterator over the shards assigned to each worker at each node
             tarfile_to_samples_nothrow,  # wds.tarfile_to_samples(handler=log_and_continue),
+            ### get the data
             wds.shuffle(
                 bufsize=_SAMPLE_SHUFFLE_SIZE,
                 initial=_SAMPLE_SHUFFLE_INITIAL,
             ),
+            ### shuffle all
         ])
     else:
         pipeline.extend([

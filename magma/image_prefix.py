@@ -72,6 +72,9 @@ class ImagePrefix(nn.Module):
             if self.encoder_type not in ENCODER_SEQ_LENS
             else self.out_dim
         )
+
+        import pdb;pdb.set_trace()
+        
         self.proj = nn.Linear(self.encoder_out_dim, proj_out_dim)
         self.dropout = nn.Dropout(config.image_embed_dropout_prob)
         self.use_layernorm = config.use_image_embed_layernorm

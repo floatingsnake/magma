@@ -38,10 +38,12 @@ if __name__ == "__main__":
         model_parameters=trainable_parameters,
         config_params=config.deepspeed_config_params,
     )
+    
     mbs = 5
-    images, captions = torch.Tensor(mbs,3,224,224).half().cuda(), torch.Tensor(mbs,2048).long().cuda()
+    images, captions = torch.ones(mbs,3,224,224).half().cuda(), torch.ones(mbs,2048).long().cuda()
     outputs = model_engine(images, captions)
     loss = outputs.loss
+    print(loss)
     model_engine.backward(loss)
     model_engine.step()
 

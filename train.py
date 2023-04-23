@@ -30,6 +30,11 @@ from magma.train_loop import (
     inference_step,
     train_step,
 )
+from magma.megatron.neox_arguments import NeoXArgs
+from magma.megatron.initialize import initialize_megatron
+from magma.megatron import mpu
+import deepspeed
+from magma.megatron.model import GPT2ModelPipe
 
 
 def get_pretraining_dataloader(config, tokenizer, transforms):

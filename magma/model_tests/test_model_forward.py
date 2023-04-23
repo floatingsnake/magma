@@ -12,7 +12,8 @@ from megatron.model import GPT2ModelPipe
 
 torch.manual_seed(7)
 
-neox_args = NeoXArgs.from_ymls(['/home/lfsm/code/magma/configs/1-3B.yml','/home/lfsm/code/magma/configs/local_setup.yml'])
+neox_args = NeoXArgs.from_ymls(['/home/lfsm/code/magma/configs/800M.yml','/home/lfsm/code/magma/configs/local_setup.yml'])
+# neox_args = NeoXArgs.from_ymls(['/home/lfsm/code/magma/configs/20B.yml'])
 neox_args.configure_distributed_args()
 neox_args.build_tokenizer()  # tokenizer needs to be build in training in order to set the padding vocab
 
@@ -28,6 +29,16 @@ from test_add_adapter import add_adapters
 add_adapters(neox_args,model,location='mlp') 
 add_adapters(neox_args,model,location='attention') 
 
+import pdb;pdb.set_trace()
+parameter = list()
+for name, param in model.named_parameters():  # freeze lm weights
+    print(name)
+    param.requires_grad = False
+    if "adapter" in name:
+        param.requires_grad = True
+        parameter.append(param)
+import pdb;pdb.set_trace()
+
 optimizer = torch.optim.Adam(model.parameters(),lr=1e-5)
 lr_scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=1)
 
@@ -41,8 +52,10 @@ model, optimizer, _, lr_scheduler = deepspeed.initialize(
     mpu=mpu if not neox_args.is_pipe_parallel else None,
 )
 
+print(model)
+
 from functools import partial
-from megatron.training import get_batch_pipe
+# from megatron.training import get_batch_pipe
 # model.set_batch_fn(
 #     partial(
 #         get_batch_pipe, neox_args=neox_args, curr_scheduler=None
@@ -67,7 +80,7 @@ model.set_batch_fn(
 
 mbs = 4
 data_list = list()
-images = torch.Tensor(mbs,3,224,224).half()
+images = torch.ones(mbs,3,224,224).half()
 # captions = torch.randint(
 #     0, neox_args.padded_vocab_size, (4, neox_args.seq_length + 1)
 # ).to(torch.int64)
@@ -83,7 +96,7 @@ from megatron.training import train_step
 from megatron.utils import Timers
 timers = Timers(use_wandb=False, tensorboard_writer=None)
 
-for i in range(2):
+for i in range(10):
     loss = model.train_batch(data_iter=data_iterator)
     print(loss)
     # loss = train_step(neox_args,timers,data_iterator,model,optimizer,lr_scheduler)
