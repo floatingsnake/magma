@@ -365,16 +365,13 @@ def build_labels(
     Additionally, masks out everything *after* the first eos token.
     """
     shape = input_embeddings.shape[:2]  # b, s
-
-    print(f'captions: {captions.shape[1]}')
-    print(f'default: {shape[1]}')
     assert captions.shape[1] >= shape[1]
 
     # make sure to add masked embedding tokens in the appropriate locations in the labels
-    embedding_tokens = torch.zeros(shape, dtype=torch.int64).to(device) - 100
-    labels = torch.cat(
-        (embedding_tokens, captions[:, : -shape[1]]), dim=1
-    )  # we truncate the sequence length of the captions, as they are always padded to the full sequence length
+    # embedding_tokens = torch.zeros(shape, dtype=torch.int64).to(device) - 100
+    labels = captions
+    ### input_embed[image,text0,text1,...text2046]
+    ### labels should shift one, became [text0,text1,...text2047], exactly captions
 
     # mask out repeating eos tokens
     for label in labels:
