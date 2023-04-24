@@ -10,7 +10,7 @@ def parse_args():
         "--config", type=str, required=False, help="path to your training config",
 	default='/ccs/home/lfsm/code/magma/configs/summit_clipH_pythia70m_web.yml')
     parser.add_argument(
-        "--train-data",
+        "--val-data",
         type=str,
         default="/gpfs/alpine/csc499/proj-shared/LAION-400m-webdataset/data/{41400..41401}.tar",
         help="Path to csv filewith training data",
@@ -22,7 +22,7 @@ def parse_args():
         help="Whether to use sampling with replacement for webdataset shard selection."
     )
     parser.add_argument(
-        "--train-num-samples",
+        "--val-num-samples",
         type=int,
         #default=407332084,
         default=1084,
@@ -54,7 +54,7 @@ def preprocess_text(text):
                 max_length=2048,
                 padding="max_length",
                 truncation=True,)
-data = get_wds_dataset(args, preprocess_img=transforms, preprocess_text=preprocess_text, is_train=True)
+data = get_wds_dataset(args, preprocess_img=transforms, preprocess_text=preprocess_text, is_train=False)
 data.set_epoch(0)
 dataloader = data.dataloader
 i=0
@@ -62,6 +62,8 @@ print('start get data')
 for batch in dataloader:
     i += 1
     print(i)
+    print(batch[0].shape)
+    print(batch[1].shape)
     if i % 100==0:
         print(f"sample {i} times done")
 print(f'total sample number is {i}')

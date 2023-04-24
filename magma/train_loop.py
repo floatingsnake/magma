@@ -50,7 +50,7 @@ def eval_step(config, eval_loader, model_engine):
 
     for i in tqdm(range(config.eval_steps), "evaluating..."):
         images, captions = next(eval_loader)
-        images, captions = images.half().cuda(), captions.cuda()
+        images, captions = images.half().squeeze(1).cuda(), captions.squeeze(1).cuda()
         if config.run_blind:
             images = torch.zeros_like(images)
         outputs = model_engine(images, captions)

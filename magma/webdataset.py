@@ -132,8 +132,6 @@ class ResampledShards2(IterableDataset):
         :param urls: a list of URLs as a Python list or brace notation string
         """
         super().__init__()
-        urls = wds.shardlists.expand_urls(urls)
-        urls=[url for url in urls if os.path.exists(url)]
         self.urls = urls
         assert isinstance(self.urls[0], str)
         self.nshards = nshards
