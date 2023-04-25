@@ -3,6 +3,7 @@ sys.path.append('..')
 import argparse
 from magma.magma import Magma
 from magma.webdataset import get_wds_dataset
+import torch
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -54,40 +55,13 @@ def preprocess_text(text):
                 max_length=2048,
                 padding="max_length",
                 truncation=True,)
-# data = get_wds_dataset(args, preprocess_img=transforms, tokenizer=tokenizer, is_train=False)
+dataset = get_wds_dataset(args, preprocess_img=transforms, preprocess_text=preprocess_text, is_train=False)
+batch_sampler = torch.utils.data.SequentialSampler(dataset)
+num_workers = 1
+dataloader = torch.utils.data.DataLoader(
+        dataset, batch_sampler=batch_sampler, num_workers=num_workers, pin_memory=True
+    )
 
-data = get_wds_dataset(args, preprocess_img=transforms, preprocess_text=preprocess_text, is_train=False)
-#data.set_epoch(0)
-dataloader = data.dataloader
-i=0
-print('start get data')
-for batch in dataloader:
-    i += 1
+for i in dataloader:
     print(i)
-    #print(batch[0].shape)
-    #print(batch[1].shape)
-    print(batch)
-    import pdb;pdb.set_trace()
-    if i % 100==0:
-        print(f"sample {i} times done")
-print(f'total sample number is {i}')
-
-
-def cycle(loader):
-    while True:
-        for data in loader:
-            yield data
-
-dataloader = cycle(dataloader)
-print('start over one epoch simmulation')
-for i in range(407332084):
-    batch = next(dataloader)
-    i += 1
-    print(i)
-    if i % 1000000==0:
-        print(f"sample {i} times done")
-print(f'total sample number is {i}')
-
-
-
-
+    break
