@@ -15,8 +15,7 @@ import torch
 import torchvision.datasets as datasets
 import webdataset as wds
 from PIL import Image
-from torch.utils.data import Dataset, DataLoader, SubsetRandomSampler, IterableDataset, get_worker_info
-from torch.utils.data.distributed import DistributedSampler
+from torch.utils.data import DataLoader,  IterableDataset, get_worker_info
 from webdataset.filters import _shuffle
 from webdataset.tariterators import base_plus_ext, url_opener, tar_file_expander, valid_sample
 
@@ -280,8 +279,8 @@ def get_wds_dataset(args, preprocess_img, is_train, epoch=0, floor=False, prepro
             epoch=shared_epoch,
         )]
     else:
-        # assert args.train_data_upsampling_factors is None,\
-        #    "--train_data_upsampling_factors is only supported when sampling with replacement (with --dataset-resampled)."
+        assert args.train_data_upsampling_factors is None,\
+           "--train_data_upsampling_factors is only supported when sampling with replacement (with --dataset-resampled)."
         pipeline = [wds.SimpleShardList(input_shards)]
 
     # at this point we have an iterator over all the shards
